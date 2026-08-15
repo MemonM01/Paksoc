@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leeds Uni PakSoc — 2026/27</title>
+<meta name="description" content="Leeds University Pakistani Society. Events, announcements, the 2026/27 group chat, the committee and photos from every night of the year.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Figtree:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@500&family=Yellowtail&display=swap" rel="stylesheet">
+<style>
+/* ===========================================================
+   Leeds Uni PakSoc
+   =========================================================== */
+:root{
+  --plum-deep:#140A24;
+  --plum:#241033;
+  --plum-2:#331546;
+  --ember:#5E2130;
+  --burnt:#9C3F22;
+  --sunset:#D06A28;
+  --glow:#EE9B45;
+  --gold:#E7A93A;
+  --gold-lt:#FFE29A;
+  --gold-dp:#B87C1E;
+  --neon:#FF4D85;
+  --neon-lt:#FFD8E6;
+  --cream:#FBEEDC;
+  --sand:#E8D3B4;
+  --muted:#B79FB6;
+  --muted-2:#8E7791;
+  --line:rgba(251,238,220,.14);
+  --line-2:rgba(251,238,220,.28);
+
+  --display:'Abril Fatface',Georgia,serif;
+  --script:'Yellowtail',cursive;
+  --body:'Figtree',system-ui,sans-serif;
+  --urdu:'Noto Nastaliq Urdu',serif;
+
+  --wrap:1180px;
+  --r:16px;
+  --ease:cubic-bezier(.22,.68,.28,1);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--plum-deep);color:var(--cream);
+  font-family:var(--body);font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+button{font:inherit;cursor:pointer;border:0;background:none;color:inherit}
+input,select,textarea{font:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 24px;position:relative;z-index:2}
+.section{padding:clamp(64px,8vw,104px) 0;position:relative}
+.section--plum{background:var(--plum)}
+.section--deep{background:var(--plum-deep)}
+
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.05;margin:0}
+h1{font-size:clamp(2.7rem,7vw,4.9rem);letter-spacing:-.005em}
+h2{font-size:clamp(2rem,4.4vw,3.2rem)}
+h3{font-size:1.26rem;line-height:1.22}
+p{margin:0}
+.lede{font-size:clamp(1.02rem,1.6vw,1.14rem);color:var(--muted);max-width:56ch;line-height:1.62}
+
+/* gold foil type */
+.gold{
+  background:linear-gradient(178deg,var(--gold-lt) 4%,var(--gold) 48%,var(--gold-dp) 96%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 3px 0 rgba(0,0,0,.42));
+}
+/* neon script */
+.neon{
+  font-family:var(--script);font-weight:400;color:var(--neon-lt);line-height:1.5;
+  text-shadow:0 0 5px #fff,0 0 14px var(--neon),0 0 34px rgba(255,77,133,.75),0 0 62px rgba(255,77,133,.4);
+}
+.neon--gold{
+  color:#FFF6DE;
+  text-shadow:0 0 5px #fff,0 0 14px var(--gold),0 0 34px rgba(231,169,58,.7),0 0 62px rgba(231,169,58,.35);
+}
+
+.eyebrow{
+  font-size:.74rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);display:flex;align-items:center;gap:11px;
+}
+.spark{width:16px;height:16px;flex:none;color:var(--gold)}
+.head{display:flex;flex-direction:column;gap:15px;margin-bottom:clamp(32px,4.2vw,52px);max-width:60ch}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 25px;border-radius:999px;border:2px solid transparent;
+  font-weight:700;font-size:.96rem;text-decoration:none;
+  transition:transform .18s var(--ease),background .18s,color .18s,border-color .18s,box-shadow .18s;
+}
+.btn--go{
+  background:linear-gradient(160deg,var(--gold-lt),var(--gold));color:#2A1405;
+  box-shadow:0 10px 30px -12px rgba(231,169,58,.9);
+}
+.btn--go:hover{transform:translateY(-2px);box-shadow:0 14px 34px -12px rgba(231,169,58,1)}
+.btn--pink{background:var(--neon);color:#fff;box-shadow:0 10px 28px -14px rgba(255,77,133,.95)}
+.btn--pink:hover{background:#ef3f77;transform:translateY(-2px)}
+.btn--line{border-color:var(--line-2);color:var(--cream)}
+.btn--line:hover{border-color:var(--cream);background:rgba(251,238,220,.08);transform:translateY(-2px)}
+.btn--dark{background:var(--plum-deep);color:var(--cream)}
+.btn--dark:hover{background:var(--plum-2);transform:translateY(-2px)}
+.btn--sm{padding:9px 16px;font-size:.86rem}
+.btn--block{width:100%}
+.btn[disabled]{opacity:.5;pointer-events:none}
+
+/* ---------- header ---------- */
+.header{
+  position:sticky;top:0;z-index:80;background:rgba(20,10,36,.9);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.header__in{display:flex;align-items:center;gap:18px;height:72px}
+.mark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream);margin-right:auto}
+.mark__badge{
+  width:42px;height:42px;border-radius:50%;flex:none;display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 28%,#2E7B4F,#14472C);
+  box-shadow:0 0 0 2px var(--gold),0 0 18px rgba(231,169,58,.45);
+}
+.mark__badge svg{width:24px;height:24px}
+.mark__txt{display:flex;flex-direction:column;line-height:1}
+.mark__uol{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.mark__name{font-family:var(--display);font-size:1.38rem;margin-top:3px}
+.nav{display:flex;align-items:center;gap:24px}
+.nav a{font-size:.9rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .16s}
+.nav a:hover{color:var(--cream)}
+.burger{display:none;padding:8px;border-radius:8px}
+@media(max-width:980px){
+  .nav{position:absolute;top:72px;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;
+       background:var(--plum);border-bottom:1px solid var(--line);padding:6px 24px 18px;display:none}
+  .nav.is-open{display:flex}
+  .nav a{padding:14px 0;border-bottom:1px solid var(--line)}
+  .header__cta{display:none}
+  .burger{display:block}
+}
+
+/* ---------- hero: the sunset ---------- */
+.hero{
+  position:relative;overflow:hidden;padding:0 0 0;
+  background:
+    radial-gradient(120% 78% at 50% 108%,#F0A64A 0%,#D8702C 16%,#A9421F 34%,#6B2430 54%,#33153F 76%,#170B28 100%);
+}
+.hero::before{ /* streaked cloud bands */
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background:
+    repeating-linear-gradient(-6deg,rgba(255,180,110,.10) 0 3px,transparent 3px 15px),
+    repeating-linear-gradient(4deg,rgba(255,140,90,.07) 0 2px,transparent 2px 22px);
+  -webkit-mask-image:linear-gradient(transparent,#000 26%,#000 76%,transparent);
+          mask-image:linear-gradient(transparent,#000 26%,#000 76%,transparent);
+}
+.lights{position:absolute;top:0;left:0;width:100%;height:104px;z-index:2;pointer-events:none}
+.bulb{animation:flick 3.4s infinite ease-in-out}
+.bulb:nth-child(2n){animation-duration:4.6s;animation-delay:.5s}
+.bulb:nth-child(3n){animation-duration:5.5s;animation-delay:1.1s}
+@keyframes flick{0%,100%{opacity:1}46%{opacity:.62}}
+
+.hero__in{
+  position:relative;z-index:3;padding-top:clamp(88px,11vw,140px);
+  padding-bottom:clamp(160px,20vw,260px);
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:18px;
+}
+.hero__urdu{font-family:var(--urdu);font-size:clamp(1.25rem,3vw,1.9rem);color:var(--gold-lt);direction:rtl;line-height:2.2;opacity:.92}
+.hero__script{font-size:clamp(2rem,5.4vw,3.4rem);margin-bottom:-14px}
+.hero h1{font-size:clamp(2.6rem,8.2vw,5.6rem);text-transform:uppercase;letter-spacing:.005em}
+.hero h1 .l2{display:block;font-size:.72em}
+.hero .lede{color:#F5DCC6;max-width:52ch;text-shadow:0 2px 10px rgba(28,10,20,.65)}
+.hero__actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}
+.hero__foot{display:flex;align-items:center;gap:10px;font-size:.87rem;color:#EBCDB4;text-shadow:0 2px 8px rgba(28,10,20,.7)}
+.pip{width:8px;height:8px;border-radius:50%;background:#7BE8A8;box-shadow:0 0 0 4px rgba(123,232,168,.2);flex:none}
+.skyline{position:absolute;left:0;bottom:-1px;width:100%;height:clamp(150px,20vw,250px);z-index:2;pointer-events:none;display:block}
+
+/* ---------- last year's highlight ---------- */
+.hl{background:linear-gradient(150deg,#3A1533 0%,#6E2630 46%,#A2431F 100%);position:relative;overflow:hidden}
+.hl::before{
+  content:"";position:absolute;inset:0;pointer-events:none;opacity:.4;
+  background:repeating-linear-gradient(-8deg,rgba(255,190,120,.09) 0 3px,transparent 3px 17px);
+}
+.hl__grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(32px,5vw,64px);align-items:center}
+.hl__copy{display:flex;flex-direction:column;gap:16px}
+.hl__script{font-size:clamp(2.3rem,5.6vw,3.6rem);line-height:1.25;margin-bottom:-8px}
+.hl__copy h2{font-size:clamp(1.8rem,3.5vw,2.6rem)}
+.hl__copy .lede{color:#F7DEC8}
+.hl__facts{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:9px}
+.hl__facts li{display:flex;align-items:center;gap:11px;font-size:.95rem;font-weight:600;color:#FFEBCF}
+.hl__facts .spark{width:14px;height:14px;color:var(--gold-lt)}
+.hl__frame{
+  position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;
+  box-shadow:0 0 0 2px var(--gold),0 30px 70px -34px #000;
+  background:radial-gradient(120% 90% at 50% 110%,#8E2F3C,#3A1030 62%,#1A0A22 100%);
+}
+.hl__frame img{width:100%;height:100%;object-fit:cover}
+.hl__ph{
+  position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:6px;padding:26px;text-align:center;
+}
+.hl__ph .ps{font-size:.68rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.hl__ph .sc{font-size:clamp(1.9rem,4.6vw,2.9rem);line-height:1.3}
+.hl__ph .zk{font-family:var(--display);font-size:clamp(1.5rem,3.6vw,2.2rem);text-transform:uppercase;letter-spacing:.02em;margin-top:6px}
+.hl__ph .yr{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:#E6BFA8;font-weight:600;margin-top:12px}
+.hl__ph .rule{width:64px;height:2px;background:var(--gold);opacity:.7;margin:10px 0 2px}
+@media(max-width:880px){.hl__grid{grid-template-columns:1fr;gap:32px}.hl__frame{max-width:420px}}
+
+/* ---------- connect ---------- */
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.link{
+  display:flex;flex-direction:column;gap:12px;padding:26px 24px 24px;border-radius:var(--r);
+  background:linear-gradient(165deg,rgba(251,238,220,.07),rgba(251,238,220,.03));
+  border:1px solid var(--line);text-decoration:none;color:var(--cream);
+  transition:transform .22s var(--ease),border-color .22s,box-shadow .22s;position:relative;overflow:hidden;
+}
+.link:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 20px 44px -26px rgba(231,169,58,.7)}
+.link__ico{width:44px;height:44px;border-radius:13px;display:grid;place-items:center;background:rgba(251,238,220,.1);color:var(--gold)}
+.link__ico svg{width:23px;height:23px}
+.link h3{font-size:1.22rem}
+.link__handle{font-size:.85rem;color:var(--gold);font-weight:600}
+.link p{font-size:.93rem;color:var(--muted);flex:1}
+.link__go{font-size:.86rem;font-weight:700;display:flex;align-items:center;gap:7px}
+.link__go svg{width:15px;height:15px;transition:transform .22s var(--ease)}
+.link:hover .link__go svg{transform:translateX(4px)}
+@media(max-width:820px){.links{grid-template-columns:1fr}}
+
+/* ---------- board ---------- */
+.board{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,4vw,52px);align-items:start}
+.col__head{display:flex;align-items:baseline;justify-content:space-between;gap:14px;margin-bottom:20px;
+  border-bottom:1px solid var(--line-2);padding-bottom:12px}
+.col__head h2{font-size:clamp(1.7rem,3vw,2.15rem)}
+.count{font-size:.76rem;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);font-weight:700}
+
+.announce,.events{display:flex;flex-direction:column;gap:12px}
+.note{
+  background:linear-gradient(160deg,rgba(251,238,220,.08),rgba(251,238,220,.03));
+  border:1px solid var(--line);border-left:4px solid var(--neon);border-radius:12px;
+  padding:19px 21px;display:flex;flex-direction:column;gap:8px;
+}
+.note--pin{border-left-color:var(--gold);background:linear-gradient(160deg,rgba(231,169,58,.15),rgba(231,169,58,.04))}
+.note__top{display:flex;align-items:center;gap:9px;flex-wrap:wrap}
+.note__date{font-size:.74rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted-2);font-weight:700}
+.note h3{font-size:1.15rem}
+.note p{font-size:.95rem;color:var(--muted);white-space:pre-wrap}
+.chip{font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700;
+  padding:3px 9px;border-radius:999px;background:var(--gold);color:#2A1405}
+.chip--sample{background:rgba(251,238,220,.16);color:var(--muted)}
+
+.ev{
+  display:flex;gap:15px;background:linear-gradient(160deg,rgba(251,238,220,.07),rgba(251,238,220,.02));
+  border:1px solid var(--line);border-radius:12px;padding:15px 17px;align-items:flex-start;
+}
+.ev__cal{width:58px;flex:none;border-radius:9px;overflow:hidden;text-align:center;border:1px solid var(--line-2)}
+.ev__cal b{display:block;background:var(--neon);color:#fff;font-size:.64rem;letter-spacing:.14em;
+  text-transform:uppercase;padding:4px 0;font-weight:700}
+.ev__cal i{display:block;font-family:var(--display);font-style:normal;font-size:1.45rem;
+  color:var(--gold);padding:5px 0 7px;line-height:1}
+.ev__body{flex:1;min-width:0}
+.ev__body h3{font-size:1.08rem;margin-bottom:4px}
+.ev__meta{font-size:.82rem;color:var(--gold);display:flex;flex-wrap:wrap;gap:3px 14px;margin-bottom:5px;font-weight:500}
+.ev__body p{font-size:.92rem;color:var(--muted)}
+.empty{
+  border:2px dashed var(--line-2);border-radius:12px;padding:28px 22px;text-align:center;
+  color:var(--muted);font-size:.94rem;background:rgba(251,238,220,.03);
+}
+.empty b{display:block;font-family:var(--display);font-size:1.15rem;color:var(--cream);margin-bottom:6px;font-weight:400}
+@media(max-width:900px){.board{grid-template-columns:1fr}}
+
+/* ---------- committee ---------- */
+.crew{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.member{display:flex;flex-direction:column;gap:12px}
+.poster{
+  position:relative;aspect-ratio:4/5;border-radius:14px;overflow:hidden;
+  background:linear-gradient(160deg,var(--plum-2),var(--ember));
+  box-shadow:0 0 0 1px var(--line-2),0 18px 40px -26px #000;
+  transition:transform .24s var(--ease),box-shadow .24s var(--ease);
+}
+.member:hover .poster{transform:translateY(-5px);box-shadow:0 0 0 1px var(--gold),0 26px 50px -26px rgba(231,169,58,.6)}
+.poster img{width:100%;height:100%;object-fit:cover}
+.poster__ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;padding:16px;text-align:center}
+.poster__ph .ini{font-family:var(--display);font-size:2.1rem;color:var(--gold);line-height:1}
+.poster__ph small{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);font-weight:700}
+.poster__ph .spark{width:22px;height:22px;opacity:.7}
+.member__role{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:700}
+.member h3{font-size:1.12rem;margin-top:2px}
+.member .tbc{color:var(--muted-2);font-family:var(--body);font-size:.95rem;font-weight:500}
+@media(max-width:900px){.crew{grid-template-columns:repeat(3,1fr);gap:16px}}
+@media(max-width:620px){.crew{grid-template-columns:repeat(2,1fr);gap:14px}}
+
+/* ---------- gallery ---------- */
+.gal__bar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;margin-bottom:24px}
+.search{position:relative;flex:1;min-width:250px;max-width:420px}
+.search input{
+  width:100%;padding:13px 16px 13px 44px;border-radius:999px;background:rgba(251,238,220,.07);
+  border:1.5px solid var(--line-2);color:var(--cream);font-size:.97rem;
+}
+.search input::placeholder{color:var(--muted-2)}
+.search input:focus{outline:none;border-color:var(--gold);background:rgba(251,238,220,.11)}
+.search svg{position:absolute;left:16px;top:50%;transform:translateY(-50%);width:17px;height:17px;color:var(--muted-2)}
+
+.albums{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:22px}
+.tab{padding:8px 16px;border-radius:999px;border:1.5px solid var(--line-2);color:var(--muted);
+  font-size:.87rem;font-weight:600;transition:all .18s var(--ease)}
+.tab:hover{color:var(--cream);border-color:var(--cream)}
+.tab.is-on{background:linear-gradient(160deg,var(--gold-lt),var(--gold));border-color:var(--gold);color:#2A1405}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.tile{position:relative;aspect-ratio:1;border-radius:12px;overflow:hidden;background:var(--plum-2);
+  border:1px solid var(--line);cursor:pointer;transition:transform .22s var(--ease),box-shadow .22s}
+.tile:hover{transform:scale(1.025);box-shadow:0 0 0 1px var(--gold)}
+.tile img{width:100%;height:100%;object-fit:cover}
+.tile__ph{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted-2);font-size:.74rem}
+.tile__tags{position:absolute;left:0;right:0;bottom:0;padding:22px 10px 9px;
+  background:linear-gradient(transparent,rgba(20,10,36,.94));font-size:.76rem;color:var(--cream);
+  opacity:0;transition:opacity .22s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tile:hover .tile__tags{opacity:1}
+@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:repeat(2,1fr)}}
+
+/* ---------- lightbox ---------- */
+.lb{position:fixed;inset:0;z-index:130;background:rgba(12,6,22,.96);display:none;align-items:center;justify-content:center;padding:22px}
+.lb.is-on{display:flex}
+.lb__fig{max-width:940px;width:100%;display:flex;flex-direction:column;gap:14px;align-items:center;margin:0}
+.lb__fig img{max-height:74vh;width:auto;border-radius:12px;box-shadow:0 30px 70px -30px #000}
+.lb__cap{text-align:center;font-size:.93rem;color:var(--muted)}
+.lb__cap b{display:block;color:var(--gold);font-family:var(--display);font-size:1.2rem;font-weight:400;margin-bottom:4px}
+.lb__x{position:absolute;top:18px;right:18px;width:44px;height:44px;border-radius:50%;background:rgba(251,238,220,.14);display:grid;place-items:center}
+.lb__x:hover{background:rgba(251,238,220,.26)}
+.lb__nav{position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border-radius:50%;background:rgba(251,238,220,.14);display:grid;place-items:center}
+.lb__nav:hover{background:rgba(251,238,220,.26)}
+.lb__nav--p{left:16px}.lb__nav--n{right:16px}
+.lb__dl{font-size:.85rem;color:var(--gold);text-decoration:none;font-weight:700}
+
+/* ---------- footer ---------- */
+.footer{position:relative;background:linear-gradient(#2C1338,#140A24);padding-top:clamp(90px,13vw,150px)}
+.footer .skyline{top:0;bottom:auto;transform:scaleY(-1);opacity:.5;height:clamp(90px,12vw,150px)}
+.footer__in{padding-bottom:28px;display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between}
+.footer__links{display:flex;flex-wrap:wrap;gap:20px;font-size:.9rem}
+.footer__links a{color:var(--muted);text-decoration:none}
+.footer__links a:hover{color:var(--cream)}
+.footer__bot{padding:18px 0 30px;border-top:1px solid var(--line);
+  display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;font-size:.82rem;color:var(--muted-2)}
+
+/* ---------- modals ---------- */
+.modal{position:fixed;inset:0;z-index:120;background:rgba(12,6,22,.86);display:none;
+  align-items:flex-start;justify-content:center;padding:22px;overflow-y:auto}
+.modal.is-on{display:flex}
+.sheet{background:var(--plum);color:var(--cream);border-radius:18px;width:100%;max-width:640px;margin:auto;
+  overflow:hidden;box-shadow:0 0 0 1px var(--line-2),0 40px 90px -40px #000}
+.sheet--wide{max-width:880px}
+.sheet__top{display:flex;align-items:center;gap:14px;padding:19px 24px;
+  background:linear-gradient(120deg,#3C1633,#7A2C28);border-bottom:1px solid var(--line)}
+.sheet__top h3{flex:1;font-size:1.3rem;color:var(--gold-lt)}
+.sheet__x{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:rgba(251,238,220,.14)}
+.sheet__x:hover{background:rgba(251,238,220,.28)}
+.sheet__body{padding:24px}
+
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.field label{font-size:.73rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--gold)}
+.field input,.field select,.field textarea{
+  padding:12px 14px;border-radius:10px;border:1.5px solid var(--line-2);background:rgba(251,238,220,.06);
+  color:var(--cream);font-size:1rem;width:100%;transition:border-color .16s,background .16s;
+}
+.field textarea{min-height:96px;resize:vertical}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);background:rgba(251,238,220,.11)}
+.field select option{background:var(--plum);color:var(--cream)}
+.field .hint{font-size:.8rem;color:var(--muted-2)}
+.field.err input,.field.err textarea,.field.err select{border-color:#FF7C93;background:rgba(255,124,147,.1)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.row2{grid-template-columns:1fr}}
+
+.alert{padding:12px 14px;border-radius:10px;font-size:.89rem;margin-bottom:16px;display:none;line-height:1.5}
+.alert.is-on{display:block}
+.alert--bad{background:rgba(255,77,133,.14);border:1px solid rgba(255,77,133,.42);color:#FFC2D4}
+.alert--ok{background:rgba(123,232,168,.13);border:1px solid rgba(123,232,168,.4);color:#B7F0CE}
+.alert--warn{background:rgba(231,169,58,.14);border:1px solid rgba(231,169,58,.42);color:#F7DDA6}
+
+.tabs{display:flex;gap:2px;padding:0 20px;background:var(--plum-deep);border-bottom:1px solid var(--line);overflow-x:auto}
+.tabs button{padding:12px 14px;font-size:.87rem;font-weight:600;color:var(--muted);white-space:nowrap;
+  border-bottom:3px solid transparent;transition:color .16s,border-color .16s}
+.tabs button:hover{color:var(--cream)}
+.tabs button.is-on{color:var(--gold);border-bottom-color:var(--gold)}
+.pane{display:none}
+.pane.is-on{display:block}
+.mini{display:flex;flex-direction:column;gap:8px;margin-top:22px;padding-top:20px;border-top:1px dashed var(--line-2)}
+.mini h4{margin:0 0 2px;font-family:var(--display);font-weight:400;font-size:1.1rem;color:var(--gold-lt)}
+.mini__row{display:flex;gap:12px;align-items:center;padding:10px 12px;background:rgba(251,238,220,.05);
+  border:1px solid var(--line);border-radius:10px;font-size:.91rem}
+.mini__row span{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.mini__row small{color:var(--muted-2);font-size:.77rem;white-space:nowrap}
+.del{color:#FF8AA6;font-size:.81rem;font-weight:700;padding:4px 8px;border-radius:6px}
+.del:hover{background:rgba(255,77,133,.14)}
+.drop{border:2px dashed var(--line-2);border-radius:12px;padding:26px;text-align:center;
+  background:rgba(251,238,220,.04);display:block;transition:border-color .18s,background .18s}
+.drop.is-over{border-color:var(--gold);background:rgba(231,169,58,.1)}
+.drop b{font-family:var(--display);font-weight:400;font-size:1.14rem;display:block;margin-bottom:4px;color:var(--gold-lt)}
+.drop p{font-size:.87rem;color:var(--muted-2)}
+.bar{height:6px;border-radius:999px;background:rgba(251,238,220,.14);overflow:hidden;margin-top:14px;display:none}
+.bar.is-on{display:block}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--neon),var(--gold));transition:width .25s}
+.signedin{display:none;align-items:center;gap:8px;font-size:.83rem;color:var(--gold);font-weight:700}
+.signedin.is-on{display:flex}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .65s var(--ease),transform .65s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv[data-d="1"]{transition-delay:.08s}
+.rv[data-d="2"]{transition-delay:.16s}
+.rv[data-d="3"]{transition-delay:.24s}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important;animation:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__in">
+    <a class="mark" href="#top" aria-label="Leeds Uni PakSoc home">
+      <span class="mark__badge">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M16.2 3.4a8.4 8.4 0 1 0 4.3 11 6.8 6.8 0 0 1-4.3-11Z" fill="#FBEEDC"/>
+          <path d="m20.6 5.1.62 1.8 1.8.62-1.8.62-.62 1.8-.62-1.8-1.8-.62 1.8-.62z" fill="#FBEEDC"/>
+          <rect x="9.6" y="11" width="4.8" height="9" fill="#FBEEDC"/>
+          <path d="M12 8.2 14.9 11H9.1z" fill="#FBEEDC"/>
+        </svg>
+      </span>
+      <span class="mark__txt">
+        <span class="mark__uol">Leeds University</span>
+        <span class="mark__name">PakSoc</span>
+      </span>
+    </a>
+    <nav class="nav" id="nav">
+      <a href="#lastyear">Last year</a>
+      <a href="#connect">Connect</a>
+      <a href="#whatson">What's on</a>
+      <a href="#committee">Committee</a>
+      <a href="#gallery">Photos</a>
+      <a href="#" id="navSignin">Committee sign in</a>
+    </nav>
+    <span class="signedin" id="signedInPill">
+      <span class="pip"></span> Signed in
+      <button class="btn btn--sm btn--line" id="openDash" style="margin-left:8px">Dashboard</button>
+    </span>
+    <a class="btn btn--go btn--sm header__cta" id="headerWA" href="#connect">Join the group chat</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <!-- festoon lights -->
+  <svg class="lights" viewBox="0 0 1200 104" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+    <path d="M-20 6 Q150 78 320 26 T660 30 T1000 22 T1220 44" fill="none" stroke="#2A1626" stroke-width="3"/>
+    <g id="bulbs"></g>
+  </svg>
+
+  <div class="wrap hero__in">
+    <p class="hero__urdu">لیڈز یونیورسٹی پاکستانی سوسائٹی</p>
+    <p class="neon hero__script">Warmly welcomes you</p>
+    <h1 class="gold">Leeds Uni PakSoc<span class="l2">Session 2026/27</span></h1>
+    <p class="lede">Culture nights, cricket, Eid dinners, chai runs and a group chat that never sleeps. Everyone's welcome — Pakistani or not, fresher or fourth year. Start with the chat, then turn up to something.</p>
+    <div class="hero__actions">
+      <a class="btn btn--go" id="heroWA" href="#connect">Join the 2026/27 group chat</a>
+      <a class="btn btn--line" href="#gallery">Find your photos</a>
+    </div>
+    <p class="hero__foot"><span class="pip"></span> Photos from every event go up within a week.</p>
+  </div>
+
+  <!-- Leeds skyline with a minar -->
+  <svg class="skyline" viewBox="0 0 1200 250" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <g fill="#150A20">
+      <!-- minar-e-pakistan style tower, left -->
+      <path d="M84 250V96h30v154z"/>
+      <path d="M78 100h42l-8-14H86z"/>
+      <path d="M92 86V54h14v32z"/>
+      <path d="M99 30c7 8 10 15 10 20H89c0-5 3-12 10-20z"/>
+      <rect x="97" y="14" width="4" height="18"/>
+      <path d="M60 250v-38h78v38z"/>
+      <!-- terrace blocks -->
+      <rect x="0" y="182" width="62" height="68"/>
+      <rect x="140" y="196" width="74" height="54"/>
+      <rect x="214" y="168" width="52" height="82"/>
+      <rect x="266" y="204" width="86" height="46"/>
+      <!-- domed hall -->
+      <rect x="352" y="176" width="112" height="74"/>
+      <path d="M408 128c26 0 44 20 44 48H364c0-28 18-48 44-48z"/>
+      <rect x="406" y="112" width="5" height="18"/>
+      <!-- town hall clock tower -->
+      <rect x="486" y="150" width="96" height="100"/>
+      <rect x="512" y="58" width="44" height="96"/>
+      <path d="M534 14c14 18 22 32 22 44h-44c0-12 8-26 22-44z"/>
+      <rect x="464" y="206" width="30" height="44"/>
+      <rect x="574" y="196" width="34" height="54"/>
+      <!-- mid blocks -->
+      <rect x="608" y="172" width="66" height="78"/>
+      <rect x="674" y="200" width="48" height="50"/>
+      <!-- parkinson-ish tower -->
+      <rect x="722" y="120" width="58" height="130"/>
+      <path d="M751 84l20 36h-40z"/>
+      <rect x="748" y="66" width="5" height="20"/>
+      <!-- right side city -->
+      <rect x="780" y="190" width="70" height="60"/>
+      <rect x="850" y="160" width="46" height="90"/>
+      <rect x="896" y="202" width="82" height="48"/>
+      <rect x="978" y="146" width="54" height="104"/>
+      <rect x="1032" y="188" width="68" height="62"/>
+      <rect x="1100" y="164" width="46" height="86"/>
+      <rect x="1146" y="200" width="54" height="50"/>
+    </g>
+    <g fill="#E7A93A" opacity=".55" id="windows"></g>
+  </svg>
+</section>
+
+<!-- ============ LAST YEAR ============ -->
+<section class="section hl" id="lastyear">
+  <div class="wrap hl__grid">
+    <div class="hl__copy rv">
+      <p class="eyebrow"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>Last year</p>
+      <p class="neon hl__script" id="hlScript"></p>
+      <h2 class="gold" id="hlTitle"></h2>
+      <p class="lede" id="hlBody"></p>
+      <ul class="hl__facts" id="hlFacts"></ul>
+    </div>
+    <div class="hl__frame rv" data-d="1" id="hlFrame">
+      <div class="hl__ph">
+        <span class="ps">Leeds Uni PakSoc presents</span>
+        <span class="neon sc" id="hlPhScript"></span>
+        <span class="rule"></span>
+        <span class="gold zk">Zack Knight</span>
+        <span class="yr">Live · Session 2025/26</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONNECT ============ -->
+<section class="section section--plum" id="connect">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>Three places we live</p>
+      <h2 class="gold">Everything happens in one of these.</h2>
+    </div>
+    <div class="links">
+      <a class="link rv" id="lnkIG" href="#" target="_blank" rel="noopener">
+        <span class="link__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+        <h3>Instagram</h3>
+        <span class="link__handle" id="hIG">@leedsunipaksoc</span>
+        <p>Posters, ticket drops and the reel from last night that you're definitely in.</p>
+        <span class="link__go">Follow us <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="link rv" data-d="1" id="lnkTT" href="#" target="_blank" rel="noopener">
+        <span class="link__ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 2h-3v13.2a2.8 2.8 0 1 1-2.3-2.76V9.3a6 6 0 1 0 5.3 5.95V8.6a7 7 0 0 0 4 1.27V6.83A4.1 4.1 0 0 1 16.5 2Z"/></svg></span>
+        <h3>TikTok</h3>
+        <span class="link__handle" id="hTT">@leedsunipaksoc</span>
+        <p>The sillier half. Committee chaos, event recaps and dance practice nobody agreed to film.</p>
+        <span class="link__go">Watch <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+      <a class="link rv" data-d="2" id="lnkWA" href="#" target="_blank" rel="noopener">
+        <span class="link__ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.05L2 22l5.1-1.33A10 10 0 1 0 12 2Zm5.6 14.2c-.24.67-1.4 1.28-1.94 1.32-.5.04-.98.22-3.3-.69-2.78-1.1-4.53-3.94-4.67-4.13-.13-.19-1.1-1.47-1.1-2.8 0-1.32.7-1.97.94-2.24a1 1 0 0 1 .72-.33h.52c.17 0 .4-.06.62.47l.85 2.07c.07.15.12.32.02.5l-.3.46-.44.48c-.14.14-.29.3-.12.58.16.28.73 1.2 1.56 1.95 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07l.87-1c.2-.23.37-.17.62-.08l2 .94c.25.12.42.18.48.28.06.1.06.6-.18 1.27Z"/></svg></span>
+        <h3>Group chat 2026/27</h3>
+        <span class="link__handle">WhatsApp · members</span>
+        <p>Where it actually gets organised — lifts to socials, spare tickets, last-minute five-a-side. New link each September.</p>
+        <span class="link__go">Join the chat <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHAT'S ON ============ -->
+<section class="section section--deep" id="whatson">
+  <div class="wrap">
+    <div class="board">
+      <div class="rv">
+        <div class="col__head"><h2 class="gold">Announcements</h2><span class="count" id="cAnn">—</span></div>
+        <div class="announce" id="announceList"></div>
+      </div>
+      <div class="rv" data-d="1">
+        <div class="col__head"><h2 class="gold">Coming up</h2><span class="count" id="cEv">—</span></div>
+        <div class="events" id="eventList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMITTEE ============ -->
+<section class="section section--plum" id="committee">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>Your 2026/27 committee</p>
+      <h2 class="gold">The ones to shout at.</h2>
+      <p class="lede">Announcement posters go up here as each role is confirmed. Grab any of us at an event — that's genuinely the fastest way to get something sorted.</p>
+    </div>
+    <div class="crew" id="crew"></div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section section--deep" id="gallery">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>The photo wall</p>
+      <h2 class="gold">Every night, photographed.</h2>
+      <p class="lede">Committee upload after each event and tag who's in the shot. Search your name to pull up yours, then open one to save it full size.</p>
+    </div>
+    <div class="gal__bar rv">
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input type="search" id="search" placeholder="Search your name, an event or a tag" aria-label="Search photos">
+      </div>
+      <span class="count" id="cPhotos">—</span>
+    </div>
+    <div class="albums" id="albumTabs"></div>
+    <div class="grid" id="photoGrid"></div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <svg class="skyline" viewBox="0 0 1200 250" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <g fill="#150A20">
+      <rect x="0" y="182" width="62" height="68"/><rect x="140" y="196" width="74" height="54"/>
+      <rect x="214" y="168" width="52" height="82"/><rect x="266" y="204" width="86" height="46"/>
+      <rect x="352" y="176" width="112" height="74"/><rect x="486" y="150" width="96" height="100"/>
+      <rect x="608" y="172" width="66" height="78"/><rect x="722" y="120" width="58" height="130"/>
+      <rect x="850" y="160" width="46" height="90"/><rect x="978" y="146" width="54" height="104"/>
+      <rect x="1100" y="164" width="46" height="86"/>
+    </g>
+  </svg>
+  <div class="wrap">
+    <div class="footer__in">
+      <div>
+        <a class="mark" href="#top" aria-label="Leeds Uni PakSoc home">
+          <span class="mark__badge">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M16.2 3.4a8.4 8.4 0 1 0 4.3 11 6.8 6.8 0 0 1-4.3-11Z" fill="#FBEEDC"/>
+              <path d="m20.6 5.1.62 1.8 1.8.62-1.8.62-.62 1.8-.62-1.8-1.8-.62 1.8-.62z" fill="#FBEEDC"/>
+              <rect x="9.6" y="11" width="4.8" height="9" fill="#FBEEDC"/><path d="M12 8.2 14.9 11H9.1z" fill="#FBEEDC"/>
+            </svg>
+          </span>
+          <span class="mark__txt"><span class="mark__uol">Leeds University</span><span class="mark__name">PakSoc</span></span>
+        </a>
+        <p class="neon" style="font-size:1.5rem;margin-top:14px">See you at the next one</p>
+      </div>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#connect">Instagram</a><a href="#connect">TikTok</a><a href="#connect">Group chat</a>
+        <a href="#whatson">What's on</a><a href="#committee">Committee</a><a href="#gallery">Photos</a>
+        <a href="#" id="footSignin">Committee sign in</a>
+      </nav>
+    </div>
+    <div class="footer__bot">
+      <span>© <span id="year">2026</span> Leeds University Pakistani Society</span>
+      <span>Photos posted here are visible to anyone with the link.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ SIGN IN ============ -->
+<div class="modal" id="signinModal" role="dialog" aria-modal="true" aria-labelledby="siTitle">
+  <div class="sheet">
+    <div class="sheet__top"><h3 id="siTitle">Committee sign in</h3><button class="sheet__x" data-close aria-label="Close">✕</button></div>
+    <div class="sheet__body">
+      <div class="alert alert--bad" id="siErr">That passcode isn't right. Ask the president or media sec for the current one.</div>
+      <div class="field" id="f-pass">
+        <label for="passcode">Committee passcode</label>
+        <input type="password" id="passcode" autocomplete="off" placeholder="Enter passcode">
+        <span class="hint">Shared with the 2026/27 committee only. Change it in Settings once you're in.</span>
+      </div>
+      <button class="btn btn--go btn--block" id="doSignin">Sign in</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ DASHBOARD ============ -->
+<div class="modal" id="dashModal" role="dialog" aria-modal="true" aria-labelledby="dashTitle">
+  <div class="sheet sheet--wide">
+    <div class="sheet__top">
+      <h3 id="dashTitle">Committee dashboard</h3>
+      <button class="btn btn--sm btn--line" id="signOut">Sign out</button>
+      <button class="sheet__x" data-close aria-label="Close">✕</button>
+    </div>
+    <div class="tabs">
+      <button class="is-on" data-pane="pAnn">Announcements</button>
+      <button data-pane="pEv">Events</button>
+      <button data-pane="pGal">Photos</button>
+      <button data-pane="pCrew">Committee posters</button>
+      <button data-pane="pSet">Settings</button>
+    </div>
+    <div class="sheet__body">
+      <div class="alert alert--warn" id="storeWarn">Running without saved storage — anything you add will disappear when the page reloads.</div>
+      <div class="alert alert--ok" id="okMsg"></div>
+
+      <section class="pane is-on" id="pAnn">
+        <div class="field"><label for="aTitle">Headline</label><input id="aTitle" placeholder="Tickets live for Culture Night"></div>
+        <div class="field"><label for="aBody">Details</label><textarea id="aBody" placeholder="What members need to know, and what they need to do about it."></textarea></div>
+        <label style="display:flex;align-items:center;gap:9px;font-size:.92rem;margin-bottom:16px"><input type="checkbox" id="aPin" style="width:auto"> Pin to the top</label>
+        <button class="btn btn--go" id="addAnn">Post announcement</button>
+        <div class="mini"><h4>Posted</h4><div id="annAdmin"></div></div>
+      </section>
+
+      <section class="pane" id="pEv">
+        <div class="field"><label for="eTitle">Event name</label><input id="eTitle" placeholder="Culture Night 2027"></div>
+        <div class="row2">
+          <div class="field"><label for="eDate">Date</label><input type="date" id="eDate"></div>
+          <div class="field"><label for="eTime">Time</label><input id="eTime" placeholder="7:00pm"></div>
+        </div>
+        <div class="field"><label for="ePlace">Where</label><input id="ePlace" placeholder="Leeds University Union, Riley Smith Hall"></div>
+        <div class="field"><label for="eBody">Details</label><textarea id="eBody" placeholder="Dress code, ticket link, what to bring."></textarea></div>
+        <button class="btn btn--go" id="addEv">Add event</button>
+        <div class="mini"><h4>Scheduled</h4><div id="evAdmin"></div></div>
+      </section>
+
+      <section class="pane" id="pGal">
+        <div class="row2">
+          <div class="field"><label for="albName">New album</label><input id="albName" placeholder="Freshers' Welcome"></div>
+          <div class="field"><label for="albDate">Event date</label><input type="date" id="albDate"></div>
+        </div>
+        <button class="btn btn--dark btn--sm" id="addAlb" style="margin-bottom:22px">Create album</button>
+        <div class="field"><label for="upAlbum">Upload into</label><select id="upAlbum"></select></div>
+        <div class="field">
+          <label for="upTags">Tag who's in these</label>
+          <input id="upTags" placeholder="Ayesha, Bilal, committee, dance">
+          <span class="hint">Comma separated. This is what members search by, so first names are enough.</span>
+        </div>
+        <label class="drop" id="drop" for="upFiles">
+          <b>Drop photos here</b>
+          <p>or tap to choose — JPG or PNG, as many as you like. They're resized before saving.</p>
+          <input type="file" id="upFiles" accept="image/*" multiple hidden>
+        </label>
+        <div class="bar" id="upBar"><i></i></div>
+        <div class="mini"><h4>Albums</h4><div id="albAdmin"></div></div>
+        <div class="mini">
+          <h4>Last year's highlight</h4>
+          <p style="font-size:.9rem;color:var(--muted-2);margin-bottom:10px">The photo shown beside the Sham e Rang write-up. A poster or a wide shot of the crowd both work. Edit the wording in the CONFIG block at the top of the file.</p>
+          <label class="drop" id="hlDrop" for="hlFile">
+            <b>Add the Sham e Rang photo</b>
+            <p>Tap to choose an image, or drop one here.</p>
+            <input type="file" id="hlFile" accept="image/*" hidden>
+          </label>
+        </div>
+      </section>
+
+      <section class="pane" id="pCrew">
+        <p style="font-size:.93rem;color:var(--muted);margin-bottom:18px">Upload each role's announcement poster as you publish it on Instagram. Portrait posters (4:5) fit the frames best. Add or rename roles in the CONFIG block at the top of the file.</p>
+        <div class="field"><label for="crewWho">Role</label><select id="crewWho"></select></div>
+        <div class="field"><label for="crewName">Name to show</label><input id="crewName" placeholder="Left blank until announced"></div>
+        <label class="drop" id="crewDrop" for="crewFile">
+          <b>Add this role's poster</b>
+          <p>Tap to choose an image, or drop one here.</p>
+          <input type="file" id="crewFile" accept="image/*" hidden>
+        </label>
+        <div class="mini"><h4>Roles</h4><div id="crewAdmin"></div></div>
+      </section>
+
+      <section class="pane" id="pSet">
+        <div class="alert alert--warn is-on">This passcode keeps casual visitors out of the dashboard — it isn't real security. Never put anything sensitive on this page, and assume photos are public to anyone with the link.</div>
+        <div class="field">
+          <label for="newPass">Change committee passcode</label>
+          <input id="newPass" placeholder="New passcode" autocomplete="off">
+          <span class="hint">Everyone signed in stays signed in until they reload. Share the new one in the committee chat.</span>
+        </div>
+        <button class="btn btn--dark" id="savePass">Save passcode</button>
+        <div class="mini">
+          <h4>Sample content</h4>
+          <p style="font-size:.9rem;color:var(--muted-2);margin-bottom:10px">The page ships with example posts and photos so it doesn't look empty. Clear them once yours are in.</p>
+          <button class="btn btn--sm" id="clearSamples" style="background:rgba(255,77,133,.16);color:#FF9DB6;align-self:flex-start">Clear all sample content</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- ============ LIGHTBOX ============ -->
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo">
+  <button class="lb__x" id="lbX" aria-label="Close">✕</button>
+  <button class="lb__nav lb__nav--p" id="lbP" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m15 6-6 6 6 6"/></svg></button>
+  <button class="lb__nav lb__nav--n" id="lbN" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="m9 6 6 6-6 6"/></svg></button>
+  <figure class="lb__fig">
+    <img id="lbImg" alt="">
+    <figcaption class="lb__cap"><b id="lbTitle"></b><span id="lbTags"></span><br><a class="lb__dl" id="lbDl" download="paksoc-photo.jpg" href="#">Save this photo</a></figcaption>
+  </figure>
+</div>
+
+<script>
+/* ==================================================================
+   1. CONFIG — edit this block, nothing else needs touching
+================================================================== */
+const CONFIG = {
+  instagram : "https://www.instagram.com/leedsunipaksocc/",
+  instaHandle: "@leedsunipaksocc",
+  tiktok    : "https://www.tiktok.com/@leedsunipaksoc",
+  tiktokHandle: "@leedsunipaksoc",
+  whatsapp  : "https://chat.whatsapp.com/IwrybT08XYNFXmbubLDKS6?s=cl&p=i&ilr=0&amv=1",     // ← 2026/27 group invite link
+  defaultPasscode: "paksoc2627",                // ← change this in Settings after first sign in
+
+  /* Last year's headline event. Add a photo either by dropping a file next
+     to this page and setting img (e.g. "photos/shamerang.jpg"), or by
+     uploading one in the dashboard under Photos → Last year's highlight. */
+  highlight: {
+    script : "Sham e Rang",
+    title  : "Our first ever formal — with Zack Knight",
+    body   : "The society's first formal, and we did not start quietly. Zack Knight — Bom Diggy, Ya Baba, Nakhre — played it live in Leeds. Whatever we put on this year has something to live up to.",
+    facts  : ["First formal in PakSoc history", "Live set from Zack Knight", "Session 2025/26"],
+    img    : ""
+  },
+
+  /* Committee roles, in the order they appear on the page.
+     name : leave "" until the role is announced
+     img  : optional — path to a poster saved next to this file,
+            e.g. "posters/president.jpg". Posters uploaded through the
+            dashboard override this. */
+  committee: [
+    { id:'president',  role:'President',        name:'Zeba', img:'' },
+    { id:'secretary',       role:'Secretary',   name:'Malaika', img:'posters/Secretary-Malaika.jpeg' },
+    { id:'treasurer',  role:'Treasurer',        name:'Shiza', img:'posters/Treasurer-Shiza.jpeg' },
+    { id:'events',     role:'Events Officer', name:'', img:'' },
+    { id:'sports',     role:'Sports Secretary', name:'Ali', img:'posters/SportsSec-Ali.jpeg' },
+    { id:'media',      role:'Social Media',name:'Amaan', img:'posters/SocialMedia-Amaan.jpeg' },
+    { id:'charity',    role:'Photographer',  name:'Shafay', img:'posters/Photographer-Shafay.jpeg' },
+    { id:'intl',       role:'Charity Officer',name:'Halima', img:'posters/Charity-Halima.jpeg' }
+  ]
+};
+
+/* ================= storage ================= */
+const KEY = 'paksoc:site:v2';
+const IMG = id => 'paksoc:img:' + id;
+const POSTER = id => 'paksoc:poster:' + id;
+const HL = 'paksoc:highlight';
+const HAS_STORE = typeof window.storage === 'object' && window.storage && typeof window.storage.get === 'function';
+
+let state = { passcode: CONFIG.defaultPasscode, announcements: [], events: [], albums: [], photos: [], crew: {}, highlightImg: false, seeded: false };
+let isCommittee = false;
+const imgCache = new Map();
+const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+
+async function load(){
+  if(!HAS_STORE) return;
+  try{ const r = await window.storage.get(KEY, true); if(r && r.value) state = Object.assign(state, JSON.parse(r.value)); }
+  catch(e){ /* first run */ }
+}
+async function save(){
+  if(!HAS_STORE) return;
+  try{ await window.storage.set(KEY, JSON.stringify(state), true); }catch(e){ console.error('Could not save', e); }
+}
+
+/* ================= samples ================= */
+function sampleImg(a, b, seed){
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs>
+  <rect width="700" height="700" fill="url(#g)"/>
+  <g fill="rgba(255,255,255,.15)"><circle cx="${140+seed*47}" cy="${200+seed*31}" r="120"/><circle cx="${520-seed*29}" cy="${480+seed*17}" r="90"/></g>
+  <path d="M0 ${560+seed*12} Q175 ${470+seed*9} 350 ${560+seed*12} T700 ${560+seed*12}" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="3"/></svg>`;
+  return 'data:image/svg+xml,' + encodeURIComponent(svg);
+}
+function seed(){
+  if(state.seeded) return;
+  state.seeded = true;
+  const t = new Date(), iso = d => new Date(t.getTime() + d*864e5).toISOString().slice(0,10);
+  state.announcements = [
+    { id:uid(), title:'Group chat for 2026/27 is open', body:'New year, new link — the old chat is archived. Join through the button at the top so you get ticket drops first.', date:iso(-2), pinned:true, sample:true },
+    { id:uid(), title:'Freshers Week commencing week 21st September', body:'', date:iso(-6), sample:true }
+  ];
+  state.events = [
+    { id:uid(), title:"Freshers' Chai & Meet", date:iso(9),  time:'6:00pm', place:'LUU, Room 6', body:'Free chai and samosas, no tickets needed. Bring someone who hasn\'t met anyone yet.', sample:true },
+    { id:uid(), title:'PakSoc vs IndSoc — five-a-side', date:iso(17), time:'2:00pm', place:'The Edge, pitch 3', body:'Annual grudge match. £2 on the door, all abilities, subs guaranteed a run.', sample:true },
+    { id:uid(), title:'Culture Night', date:iso(38), time:'7:00pm', place:'Riley Smith Hall', body:'Food, dance, qawwali and the fashion walk. Tickets go live two weeks before — they sell out.', sample:true }
+  ];
+  const albumId = uid();
+  state.albums = [{ id:albumId, name:"Freshers' Welcome", date:iso(-14), sample:true }];
+  const pairs = [['#FF4D85','#E7A93A'],['#D06A28','#331546'],['#E7A93A','#9C3F22'],['#5E2130','#EE9B45'],['#331546','#FF4D85'],['#9C3F22','#E7A93A']];
+  state.photos = pairs.map((p,i) => ({ id:uid(), albumId, caption:"Freshers' Welcome", tags:['sample'], src:sampleImg(p[0],p[1],i), sample:true, at:Date.now()-i*1000 }));
+}
+
+/* ================= helpers ================= */
+const $ = s => document.querySelector(s);
+const $$ = s => [...document.querySelectorAll(s)];
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+const SPARK = '<svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>';
+function niceDate(iso){
+  if(!iso) return '';
+  const d = new Date(iso + 'T00:00');
+  return isNaN(d) ? iso : d.getDate() + ' ' + MON[d.getMonth()] + ' ' + d.getFullYear();
+}
+function initials(role, name){
+  const src = (name || role || '').trim();
+  return src.split(/\s+/).slice(0,2).map(w => w[0]).join('').toUpperCase() || '★';
+}
+
+/* ================= decorative: bulbs + windows ================= */
+(function drawLights(){
+  const path = document.querySelector('.lights path');
+  const g = document.getElementById('bulbs');
+  const len = path.getTotalLength();
+  const cols = ['#FFD98A','#FFC24B','#FFE9B8'];
+  let out = '';
+  for(let i = 1; i < 26; i++){
+    const p = path.getPointAtLength(len * i / 26);
+    const c = cols[i % cols.length];
+    out += `<g class="bulb"><line x1="${p.x}" y1="${p.y}" x2="${p.x}" y2="${p.y+11}" stroke="#2A1626" stroke-width="2"/>`
+        +  `<circle cx="${p.x}" cy="${p.y+16}" r="10" fill="${c}" opacity=".22"/>`
+        +  `<circle cx="${p.x}" cy="${p.y+16}" r="4.6" fill="${c}"/></g>`;
+  }
+  g.innerHTML = out;
+})();
+(function drawWindows(){
+  const g = document.getElementById('windows');
+  if(!g) return;
+  let out = '';
+  for(let i = 0; i < 150; i++){
+    const x = Math.round(Math.random()*1190), y = 150 + Math.round(Math.random()*92);
+    if(Math.random() > .55) out += `<rect x="${x}" y="${y}" width="3" height="4"/>`;
+  }
+  g.innerHTML = out;
+})();
+
+/* ================= public render ================= */
+function renderAnnouncements(){
+  const list = [...state.announcements].sort((a,b)=>(b.pinned?1:0)-(a.pinned?1:0) || (b.date||'').localeCompare(a.date||''));
+  $('#cAnn').textContent = list.length ? list.length + (list.length===1?' post':' posts') : 'none yet';
+  $('#announceList').innerHTML = list.length ? list.map(a => `
+    <article class="note ${a.pinned?'note--pin':''}">
+      <div class="note__top">${a.pinned?'<span class="chip">Pinned</span>':''}${a.sample?'<span class="chip chip--sample">Sample</span>':''}<span class="note__date">${esc(niceDate(a.date))}</span></div>
+      <h3>${esc(a.title)}</h3><p>${esc(a.body)}</p></article>`).join('')
+    : `<div class="empty"><b>Nothing announced yet.</b>Committee post here first — check the Instagram in the meantime.</div>`;
+}
+function renderEvents(){
+  const today = new Date().toISOString().slice(0,10);
+  const list = [...state.events].sort((a,b)=>(a.date||'').localeCompare(b.date||'')).filter(e=>!e.date || e.date>=today);
+  $('#cEv').textContent = list.length ? list.length + (list.length===1?' event':' events') : 'none yet';
+  $('#eventList').innerHTML = list.length ? list.map(e => {
+    const d = e.date ? new Date(e.date+'T00:00') : null;
+    return `<article class="ev"><div class="ev__cal"><b>${d?MON[d.getMonth()]:'TBC'}</b><i>${d?d.getDate():'?'}</i></div>
+      <div class="ev__body"><h3>${esc(e.title)} ${e.sample?'<span class="chip chip--sample">Sample</span>':''}</h3>
+      <div class="ev__meta">${e.time?'<span>'+esc(e.time)+'</span>':''}${e.place?'<span>'+esc(e.place)+'</span>':''}</div>
+      ${e.body?'<p>'+esc(e.body)+'</p>':''}</div></article>`;
+  }).join('') : `<div class="empty"><b>No events in the diary.</b>The next one usually goes up a fortnight before.</div>`;
+}
+
+/* ---- last year's highlight ---- */
+async function renderHighlight(){
+  const h = CONFIG.highlight || {};
+  $('#hlScript').textContent = h.script || '';
+  $('#hlPhScript').textContent = h.script || '';
+  $('#hlTitle').textContent = h.title || '';
+  $('#hlBody').textContent = h.body || '';
+  $('#hlFacts').innerHTML = (h.facts || []).map(f => `<li>${SPARK}${esc(f)}</li>`).join('');
+
+  let src = h.img || null;
+  if(!src && state.highlightImg && HAS_STORE){
+    if(imgCache.has('hl')) src = imgCache.get('hl');
+    else { try{ const r = await window.storage.get(HL, true); if(r && r.value){ imgCache.set('hl', r.value); src = r.value; } }catch(e){} }
+  } else if(!src && imgCache.has('hl')) src = imgCache.get('hl');
+  if(!src) return;
+  const frame = $('#hlFrame'), img = new Image();
+  img.alt = (h.script || 'Event') + ' — ' + (h.title || '');
+  img.onload = () => { const ph = frame.querySelector('.hl__ph'); if(ph) ph.remove(); frame.prepend(img); };
+  img.src = src;
+}
+
+/* ---- committee ---- */
+async function getPoster(m){
+  const saved = state.crew[m.id] || {};
+  if(imgCache.has('p_'+m.id)) return imgCache.get('p_'+m.id);
+  if(saved.hasImg && HAS_STORE){
+    try{ const r = await window.storage.get(POSTER(m.id), true); if(r && r.value){ imgCache.set('p_'+m.id, r.value); return r.value; } }catch(e){}
+  }
+  return m.img || null;
+}
+function renderCrew(){
+  const wrap = $('#crew');
+  wrap.innerHTML = CONFIG.committee.map((m,i) => {
+    const saved = state.crew[m.id] || {};
+    const name = saved.name || m.name;
+    return `<article class="member rv" data-d="${i%4}">
+      <div class="poster" data-m="${m.id}">
+        <div class="poster__ph">${SPARK}<span class="ini">${esc(initials(m.role, name))}</span><small>Poster coming soon</small></div>
+      </div>
+      <div><span class="member__role">${esc(m.role)}</span>
+      ${name ? `<h3>${esc(name)}</h3>` : `<h3 class="tbc">To be announced</h3>`}</div>
+    </article>`;
+  }).join('');
+
+  CONFIG.committee.forEach(async m => {
+    const frame = wrap.querySelector(`[data-m="${m.id}"]`);
+    if(!frame) return;
+    const src = await getPoster(m);
+    if(!src) return;
+    const img = new Image();
+    const saved = state.crew[m.id] || {};
+    img.alt = (saved.name || m.name || m.role) + ' — ' + m.role;
+    img.onload = () => { const ph = frame.querySelector('.poster__ph'); if(ph) ph.remove(); frame.prepend(img); };
+    img.src = src;
+  });
+  $$('#crew .rv').forEach(el => io.observe(el));
+}
+
+/* ---- gallery ---- */
+let currentAlbum = 'all', visible = [];
+async function getSrc(p){
+  if(p.src) return p.src;
+  if(imgCache.has(p.id)) return imgCache.get(p.id);
+  if(!HAS_STORE) return null;
+  try{ const r = await window.storage.get(IMG(p.id), true); if(r && r.value){ imgCache.set(p.id, r.value); return r.value; } }catch(e){}
+  return null;
+}
+function renderAlbumTabs(){
+  const tabs = [{id:'all',name:'All photos'}, ...[...state.albums].sort((a,b)=>(b.date||'').localeCompare(a.date||''))];
+  $('#albumTabs').innerHTML = tabs.map(a => `<button class="tab ${currentAlbum===a.id?'is-on':''}" data-alb="${a.id}">${esc(a.name)}</button>`).join('');
+  $$('#albumTabs .tab').forEach(b => b.addEventListener('click', () => { currentAlbum = b.dataset.alb; $('#search').value=''; renderAlbumTabs(); renderGrid(); }));
+}
+function renderGrid(){
+  const q = $('#search').value.trim().toLowerCase();
+  let list = [...state.photos].sort((a,b)=>(b.at||0)-(a.at||0));
+  if(q){
+    const albumName = id => (state.albums.find(a=>a.id===id)||{}).name || '';
+    list = list.filter(p => (p.tags||[]).some(t=>t.toLowerCase().includes(q)) || (p.caption||'').toLowerCase().includes(q) || albumName(p.albumId).toLowerCase().includes(q));
+  } else if(currentAlbum !== 'all'){ list = list.filter(p => p.albumId === currentAlbum); }
+  visible = list;
+  $('#cPhotos').textContent = state.photos.length + ' photos · ' + state.albums.length + ' albums';
+
+  const grid = $('#photoGrid');
+  if(!list.length){
+    grid.style.display = 'block';
+    grid.innerHTML = q
+      ? `<div class="empty"><b>Nothing tagged “${esc(q)}”.</b>Try a first name, or ask committee to tag you — message the group chat.</div>`
+      : `<div class="empty"><b>No photos up yet.</b>They go up within a week of each event.</div>`;
+    return;
+  }
+  grid.style.display = 'grid';
+  grid.innerHTML = list.map((p,i) => `<figure class="tile" data-i="${i}" tabindex="0" role="button" aria-label="Open photo">
+      <span class="tile__ph">loading…</span>
+      <figcaption class="tile__tags">${esc((p.tags||[]).join(' · ') || p.caption || '')}</figcaption></figure>`).join('');
+  list.forEach(async (p,i) => {
+    const tile = grid.querySelector(`[data-i="${i}"]`); if(!tile) return;
+    const src = await getSrc(p); const ph = tile.querySelector('.tile__ph');
+    if(src){ const img = new Image(); img.src = src; img.alt = (p.tags||[]).join(', ') || 'PakSoc photo';
+      img.onload = () => { ph && ph.remove(); tile.prepend(img); };
+    } else if(ph){ ph.textContent = 'unavailable'; }
+  });
+  $$('#photoGrid .tile').forEach(t => {
+    t.addEventListener('click', () => openLb(+t.dataset.i));
+    t.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openLb(+t.dataset.i); } });
+  });
+}
+
+/* ---- lightbox ---- */
+let lbIndex = 0;
+async function openLb(i){
+  if(!visible.length) return;
+  lbIndex = (i + visible.length) % visible.length;
+  const p = visible[lbIndex], album = state.albums.find(a=>a.id===p.albumId), src = await getSrc(p);
+  $('#lbImg').src = src || ''; $('#lbImg').alt = (p.tags||[]).join(', ') || 'PakSoc photo';
+  $('#lbTitle').textContent = album ? album.name : (p.caption || 'PakSoc');
+  $('#lbTags').textContent = (p.tags||[]).length ? 'Tagged: ' + p.tags.join(', ') : '';
+  $('#lbDl').href = src || '#';
+  $('#lb').classList.add('is-on');
+}
+$('#lbX').addEventListener('click', ()=>$('#lb').classList.remove('is-on'));
+$('#lbP').addEventListener('click', ()=>openLb(lbIndex-1));
+$('#lbN').addEventListener('click', ()=>openLb(lbIndex+1));
+$('#lb').addEventListener('click', e => { if(e.target.id==='lb') $('#lb').classList.remove('is-on'); });
+document.addEventListener('keydown', e => {
+  if(!$('#lb').classList.contains('is-on')) return;
+  if(e.key==='Escape') $('#lb').classList.remove('is-on');
+  if(e.key==='ArrowLeft') openLb(lbIndex-1);
+  if(e.key==='ArrowRight') openLb(lbIndex+1);
+});
+$('#search').addEventListener('input', () => { currentAlbum='all'; renderAlbumTabs(); renderGrid(); });
+
+/* ================= committee area ================= */
+function openModal(id){ $(id).classList.add('is-on'); document.body.style.overflow='hidden'; }
+function closeModal(el){ el.classList.remove('is-on'); document.body.style.overflow=''; }
+$$('[data-close]').forEach(b => b.addEventListener('click', ()=>closeModal(b.closest('.modal'))));
+$$('.modal').forEach(m => m.addEventListener('click', e => { if(e.target===m) closeModal(m); }));
+
+function askSignin(e){ if(e) e.preventDefault(); isCommittee ? openDash() : openModal('#signinModal'); }
+$('#navSignin').addEventListener('click', askSignin);
+$('#footSignin').addEventListener('click', askSignin);
+$('#openDash').addEventListener('click', ()=>openDash());
+
+$('#doSignin').addEventListener('click', () => {
+  const val = $('#passcode').value.trim();
+  if(val && val === state.passcode){
+    isCommittee = true; $('#siErr').classList.remove('is-on'); $('#passcode').value='';
+    closeModal($('#signinModal')); $('#signedInPill').classList.add('is-on'); openDash();
+  } else { $('#siErr').classList.add('is-on'); $('#f-pass').classList.add('err'); }
+});
+$('#passcode').addEventListener('keydown', e => { if(e.key==='Enter') $('#doSignin').click(); });
+$('#passcode').addEventListener('input', ()=>$('#f-pass').classList.remove('err'));
+$('#signOut').addEventListener('click', () => { isCommittee=false; $('#signedInPill').classList.remove('is-on'); closeModal($('#dashModal')); });
+
+function openDash(){ if(!HAS_STORE) $('#storeWarn').classList.add('is-on'); renderAdmin(); openModal('#dashModal'); }
+$$('.tabs button').forEach(b => b.addEventListener('click', () => {
+  $$('.tabs button').forEach(x=>x.classList.remove('is-on'));
+  $$('.pane').forEach(p=>p.classList.remove('is-on'));
+  b.classList.add('is-on'); $('#'+b.dataset.pane).classList.add('is-on');
+}));
+function toast(msg){
+  const el = $('#okMsg'); el.textContent = msg; el.classList.add('is-on');
+  clearTimeout(toast.t); toast.t = setTimeout(()=>el.classList.remove('is-on'), 3200);
+}
+async function commit(){ await save(); renderAnnouncements(); renderEvents(); renderHighlight(); renderCrew(); renderAlbumTabs(); renderGrid(); renderAdmin(); }
+
+function renderAdmin(){
+  $('#annAdmin').innerHTML = state.announcements.length ? state.announcements.map(a =>
+    `<div class="mini__row"><span>${esc(a.title)}</span><small>${esc(niceDate(a.date))}</small><button class="del" data-del="ann" data-id="${a.id}">Delete</button></div>`).join('')
+    : '<p style="font-size:.9rem;color:var(--muted-2)">Nothing posted yet.</p>';
+  $('#evAdmin').innerHTML = state.events.length ? state.events.map(e =>
+    `<div class="mini__row"><span>${esc(e.title)}</span><small>${esc(niceDate(e.date))}</small><button class="del" data-del="ev" data-id="${e.id}">Delete</button></div>`).join('')
+    : '<p style="font-size:.9rem;color:var(--muted-2)">No events scheduled.</p>';
+  $('#albAdmin').innerHTML = state.albums.length ? state.albums.map(a => {
+    const n = state.photos.filter(p=>p.albumId===a.id).length;
+    return `<div class="mini__row"><span>${esc(a.name)}</span><small>${n} photo${n===1?'':'s'}</small><button class="del" data-del="alb" data-id="${a.id}">Delete</button></div>`;
+  }).join('') : '<p style="font-size:.9rem;color:var(--muted-2)">Create an album before uploading.</p>';
+  $('#upAlbum').innerHTML = state.albums.length ? state.albums.map(a=>`<option value="${a.id}">${esc(a.name)}</option>`).join('') : '<option value="">Create an album first</option>';
+
+  $('#crewWho').innerHTML = CONFIG.committee.map(m=>`<option value="${m.id}">${esc(m.role)}</option>`).join('');
+  $('#crewAdmin').innerHTML = CONFIG.committee.map(m => {
+    const s = state.crew[m.id] || {};
+    const has = s.hasImg || m.img;
+    return `<div class="mini__row"><span>${esc(m.role)}${(s.name||m.name)?' — '+esc(s.name||m.name):''}</span>
+      <small>${has?'poster added':'no poster'}</small>
+      ${s.hasImg?`<button class="del" data-del="crew" data-id="${m.id}">Remove</button>`:''}</div>`;
+  }).join('');
+  syncCrewFields();
+
+  $$('[data-del]').forEach(b => b.addEventListener('click', async () => {
+    const { del, id } = b.dataset;
+    if(del==='ann') state.announcements = state.announcements.filter(x=>x.id!==id);
+    if(del==='ev')  state.events = state.events.filter(x=>x.id!==id);
+    if(del==='crew'){
+      if(HAS_STORE){ try{ await window.storage.delete(POSTER(id), true); }catch(e){} }
+      imgCache.delete('p_'+id);
+      state.crew[id] = Object.assign({}, state.crew[id], { hasImg:false });
+    }
+    if(del==='alb'){
+      if(!confirm('Delete this album and its photos? This can\'t be undone.')) return;
+      const gone = state.photos.filter(p=>p.albumId===id);
+      state.photos = state.photos.filter(p=>p.albumId!==id);
+      state.albums = state.albums.filter(a=>a.id!==id);
+      if(HAS_STORE) for(const p of gone){ try{ await window.storage.delete(IMG(p.id), true); }catch(e){} }
+      if(currentAlbum===id) currentAlbum='all';
+    }
+    await commit();
+  }));
+}
+function syncCrewFields(){
+  const id = $('#crewWho').value;
+  const m = CONFIG.committee.find(x=>x.id===id) || {};
+  const s = state.crew[id] || {};
+  $('#crewName').value = s.name || m.name || '';
+}
+$('#crewWho').addEventListener('change', syncCrewFields);
+$('#crewName').addEventListener('change', async () => {
+  const id = $('#crewWho').value;
+  state.crew[id] = Object.assign({}, state.crew[id], { name: $('#crewName').value.trim() });
+  await commit(); toast('Name updated.');
+});
+
+/* ---- add content ---- */
+$('#addAnn').addEventListener('click', async () => {
+  const title = $('#aTitle').value.trim(), body = $('#aBody').value.trim();
+  if(!title){ $('#aTitle').focus(); return; }
+  state.announcements.unshift({ id:uid(), title, body, date:new Date().toISOString().slice(0,10), pinned:$('#aPin').checked });
+  $('#aTitle').value=''; $('#aBody').value=''; $('#aPin').checked=false;
+  await commit(); toast('Announcement posted — it\'s live on the page.');
+});
+$('#addEv').addEventListener('click', async () => {
+  const title = $('#eTitle').value.trim();
+  if(!title){ $('#eTitle').focus(); return; }
+  state.events.push({ id:uid(), title, date:$('#eDate').value, time:$('#eTime').value.trim(), place:$('#ePlace').value.trim(), body:$('#eBody').value.trim() });
+  ['#eTitle','#eDate','#eTime','#ePlace','#eBody'].forEach(s=>$(s).value='');
+  await commit(); toast('Event added to the diary.');
+});
+$('#addAlb').addEventListener('click', async () => {
+  const name = $('#albName').value.trim();
+  if(!name){ $('#albName').focus(); return; }
+  state.albums.unshift({ id:uid(), name, date:$('#albDate').value });
+  $('#albName').value=''; $('#albDate').value='';
+  await commit(); toast('Album created — now upload into it.');
+});
+
+/* ---- images ---- */
+function shrink(file, max=1400, q=0.72){
+  return new Promise((res, rej) => {
+    const img = new Image(), url = URL.createObjectURL(file);
+    img.onload = () => {
+      const s = Math.min(1, max/Math.max(img.width, img.height));
+      const c = document.createElement('canvas');
+      c.width = Math.round(img.width*s); c.height = Math.round(img.height*s);
+      c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+      URL.revokeObjectURL(url); res(c.toDataURL('image/jpeg', q));
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); rej(new Error('bad image')); };
+    img.src = url;
+  });
+}
+async function handleFiles(files){
+  const albumId = $('#upAlbum').value;
+  if(!albumId){ toast('Create an album first, then upload into it.'); return; }
+  const tags = $('#upTags').value.split(',').map(t=>t.trim()).filter(Boolean);
+  const list = [...files].filter(f=>f.type.startsWith('image/'));
+  if(!list.length) return;
+  const bar = $('#upBar'); bar.classList.add('is-on');
+  const fill = bar.querySelector('i');
+  let done = 0, failed = 0;
+  for(const file of list){
+    try{
+      const dataUrl = await shrink(file), id = uid();
+      if(HAS_STORE) await window.storage.set(IMG(id), dataUrl, true);
+      imgCache.set(id, dataUrl);
+      state.photos.unshift({ id, albumId, tags, caption:'', at:Date.now() });
+    }catch(e){ failed++; }
+    done++; fill.style.width = Math.round(done/list.length*100)+'%';
+  }
+  await save(); renderAlbumTabs(); renderGrid(); renderAdmin();
+  setTimeout(()=>{ bar.classList.remove('is-on'); fill.style.width='0'; }, 700);
+  toast(`${done-failed} photo${done-failed===1?'':'s'} added${failed?`, ${failed} couldn't be read`:''}.`);
+  $('#upTags').value = '';
+}
+$('#upFiles').addEventListener('change', e => handleFiles(e.target.files));
+const drop = $('#drop');
+['dragenter','dragover'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add('is-over'); }));
+['dragleave','drop'].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove('is-over'); }));
+drop.addEventListener('drop', e => handleFiles(e.dataTransfer.files));
+
+async function handlePoster(file){
+  if(!file || !file.type.startsWith('image/')) return;
+  const id = $('#crewWho').value;
+  try{
+    const dataUrl = await shrink(file, 1200, .78);
+    if(HAS_STORE) await window.storage.set(POSTER(id), dataUrl, true);
+    imgCache.set('p_'+id, dataUrl);
+    state.crew[id] = Object.assign({}, state.crew[id], { hasImg:true, name:$('#crewName').value.trim() });
+    await commit();
+    toast('Poster added to the committee page.');
+  }catch(e){ toast('That image couldn\'t be read — try a JPG or PNG.'); }
+}
+async function handleHighlight(file){
+  if(!file || !file.type.startsWith('image/')) return;
+  try{
+    const dataUrl = await shrink(file, 1400, .78);
+    if(HAS_STORE) await window.storage.set(HL, dataUrl, true);
+    imgCache.set('hl', dataUrl);
+    state.highlightImg = true;
+    await commit(); toast('Highlight photo added.');
+  }catch(e){ toast('That image couldn\'t be read — try a JPG or PNG.'); }
+}
+$('#hlFile').addEventListener('change', e => handleHighlight(e.target.files[0]));
+const hdrop = $('#hlDrop');
+['dragenter','dragover'].forEach(ev => hdrop.addEventListener(ev, e => { e.preventDefault(); hdrop.classList.add('is-over'); }));
+['dragleave','drop'].forEach(ev => hdrop.addEventListener(ev, e => { e.preventDefault(); hdrop.classList.remove('is-over'); }));
+hdrop.addEventListener('drop', e => handleHighlight(e.dataTransfer.files[0]));
+
+$('#crewFile').addEventListener('change', e => handlePoster(e.target.files[0]));
+const cdrop = $('#crewDrop');
+['dragenter','dragover'].forEach(ev => cdrop.addEventListener(ev, e => { e.preventDefault(); cdrop.classList.add('is-over'); }));
+['dragleave','drop'].forEach(ev => cdrop.addEventListener(ev, e => { e.preventDefault(); cdrop.classList.remove('is-over'); }));
+cdrop.addEventListener('drop', e => handlePoster(e.dataTransfer.files[0]));
+
+/* ---- settings ---- */
+$('#savePass').addEventListener('click', async () => {
+  const v = $('#newPass').value.trim();
+  if(v.length < 4){ toast('Use at least four characters.'); return; }
+  state.passcode = v; $('#newPass').value='';
+  await save(); toast('Passcode changed. Share it in the committee chat.');
+});
+$('#clearSamples').addEventListener('click', async () => {
+  if(!confirm('Remove all sample posts, events and photos?')) return;
+  state.announcements = state.announcements.filter(x=>!x.sample);
+  state.events = state.events.filter(x=>!x.sample);
+  state.photos = state.photos.filter(x=>!x.sample);
+  state.albums = state.albums.filter(x=>!x.sample);
+  currentAlbum = 'all';
+  await commit(); toast('Sample content cleared.');
+});
+
+/* ================= chrome ================= */
+$('#year').textContent = new Date().getFullYear();
+const burger = $('#burger'), nav = $('#nav');
+burger.addEventListener('click', () => { const o = nav.classList.toggle('is-open'); burger.setAttribute('aria-expanded', o); });
+nav.addEventListener('click', e => { if(e.target.tagName==='A'){ nav.classList.remove('is-open'); burger.setAttribute('aria-expanded', false); } });
+
+function wireLinks(){
+  $('#lnkIG').href = CONFIG.instagram; $('#hIG').textContent = CONFIG.instaHandle;
+  $('#lnkTT').href = CONFIG.tiktok;    $('#hTT').textContent = CONFIG.tiktokHandle;
+  $('#lnkWA').href = CONFIG.whatsapp;
+  [['#heroWA'],['#headerWA']].forEach(([s]) => { const el=$(s); el.href=CONFIG.whatsapp; el.target='_blank'; el.rel='noopener'; });
+}
+const io = new IntersectionObserver(en => en.forEach(x => { if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold:.14, rootMargin:'0px 0px -40px' });
+
+/* ================= boot ================= */
+(async function init(){
+  wireLinks();
+  await load();
+  if(!state.seeded){ seed(); await save(); }
+  renderAnnouncements(); renderEvents(); renderHighlight(); renderCrew(); renderAlbumTabs(); renderGrid();
+  $$('.rv').forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>
