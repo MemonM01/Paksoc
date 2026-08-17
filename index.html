@@ -120,10 +120,10 @@ p{margin:0}
 .mark{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--cream);margin-right:auto}
 .mark__badge{
   width:42px;height:42px;border-radius:50%;flex:none;display:grid;place-items:center;
-  background:radial-gradient(circle at 35% 28%,#2E7B4F,#14472C);
+  background:var(--cream);
   box-shadow:0 0 0 2px var(--gold),0 0 18px rgba(231,169,58,.45);
 }
-.mark__badge svg{width:24px;height:24px}
+.mark__badge svg,.mark__badge img{width:24px;height:24px}
 .mark__txt{display:flex;flex-direction:column;line-height:1}
 .mark__uol{font-size:.6rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700}
 .mark__name{font-family:var(--display);font-size:1.38rem;margin-top:3px}
@@ -424,12 +424,7 @@ p{margin:0}
   <div class="wrap header__in">
     <a class="mark" href="#top" aria-label="Leeds Uni PakSoc home">
       <span class="mark__badge">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <path d="M16.2 3.4a8.4 8.4 0 1 0 4.3 11 6.8 6.8 0 0 1-4.3-11Z" fill="#FBEEDC"/>
-          <path d="m20.6 5.1.62 1.8 1.8.62-1.8.62-.62 1.8-.62-1.8-1.8-.62 1.8-.62z" fill="#FBEEDC"/>
-          <rect x="9.6" y="11" width="4.8" height="9" fill="#FBEEDC"/>
-          <path d="M12 8.2 14.9 11H9.1z" fill="#FBEEDC"/>
-        </svg>
+        <img src="logo-icon.png" alt="" width="24" height="24">
       </span>
       <span class="mark__txt">
         <span class="mark__uol">Leeds University</span>
@@ -663,11 +658,7 @@ p{margin:0}
       <div>
         <a class="mark" href="#top" aria-label="Leeds Uni PakSoc home">
           <span class="mark__badge">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M16.2 3.4a8.4 8.4 0 1 0 4.3 11 6.8 6.8 0 0 1-4.3-11Z" fill="#FBEEDC"/>
-              <path d="m20.6 5.1.62 1.8 1.8.62-1.8.62-.62 1.8-.62-1.8-1.8-.62 1.8-.62z" fill="#FBEEDC"/>
-              <rect x="9.6" y="11" width="4.8" height="9" fill="#FBEEDC"/><path d="M12 8.2 14.9 11H9.1z" fill="#FBEEDC"/>
-            </svg>
+            <img src="logo-icon.png" alt="" width="24" height="24">
           </span>
           <span class="mark__txt"><span class="mark__uol">Leeds University</span><span class="mark__name">PakSoc</span></span>
         </a>
@@ -858,7 +849,6 @@ const CONFIG = {
     { id:'president',  role:'President',        name:'Zeba', img:'' },
     { id:'secretary',       role:'Secretary',   name:'Malaika', img:'posters/Secretary-Malaika.jpeg' },
     { id:'treasurer',  role:'Treasurer',        name:'Shiza', img:'posters/Treasurer-Shiza.jpeg' },
-    { id:'events',     role:'Events Officer', name:'', img:'' },
     { id:'sponsorship',     role:'Sponsorship Officer', name:'Saffah', img:'posters/Sponsorship-Saffah.jpeg' },
     { id:'sports',     role:'Sports Secretary', name:'Ali', img:'posters/SportsSec-Ali.jpeg' },
     { id:'media',      role:'Social Media',name:'Amaan', img:'posters/SocialMedia-Amaan.jpeg' },
