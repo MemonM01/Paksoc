@@ -209,7 +209,7 @@ p{margin:0}
 @media(max-width:880px){.hl__grid{grid-template-columns:1fr;gap:32px}.hl__frame{max-width:420px}}
 
 /* ---------- connect ---------- */
-.links{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
 .link{
   display:flex;flex-direction:column;gap:12px;padding:26px 24px 24px;border-radius:var(--r);
   background:linear-gradient(165deg,rgba(251,238,220,.07),rgba(251,238,220,.03));
@@ -437,8 +437,8 @@ p{margin:0}
       </span>
     </a>
     <nav class="nav" id="nav">
-      <a href="#lastyear">Last year</a>
       <a href="#connect">Connect</a>
+      <a href="#lastyear">Last year</a>
       <a href="#whatson">What's on</a>
       <a href="#committee">Committee</a>
       <a href="#gallery">Photos</a>
@@ -470,7 +470,7 @@ p{margin:0}
     <p class="hero__urdu">لیڈز یونیورسٹی پاکستانی سوسائٹی</p>
     <p class="neon hero__script">Warmly welcomes you</p>
     <h1 class="gold">Leeds Uni PakSoc<span class="l2">2026/27</span></h1>
-    <p class="lede">Culture nights, cricket, Eid dinners, chai runs and a group chat that never sleeps. Everyone's welcome — Pakistani or not, fresher or fourth year. Start with the chat, then turn up to something.</p>
+    <p class="lede">Culture nights, cricket, Eid dinners, chai runs and a group chat that never sleeps. Everyone's welcome, Pakistani or not, fresher or fourth year. Start with the chat, then turn up to something.</p>
     <div class="hero__actions">
       <a class="btn btn--go" id="heroWA" href="#connect">Join the 2026/27 group chat</a>
       <a class="btn btn--line" href="#gallery">Find your photos</a>
@@ -523,33 +523,11 @@ p{margin:0}
   </svg>
 </section>
 
-<!-- ============ LAST YEAR ============ -->
-<section class="section hl" id="lastyear">
-  <div class="wrap hl__grid">
-    <div class="hl__copy rv">
-      <p class="eyebrow"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>Last year</p>
-      <p class="neon hl__script" id="hlScript"></p>
-      <h2 class="gold" id="hlTitle"></h2>
-      <p class="lede" id="hlBody"></p>
-      <ul class="hl__facts" id="hlFacts"></ul>
-    </div>
-    <div class="hl__frame rv" data-d="1" id="hlFrame">
-      <div class="hl__ph">
-        <span class="ps">Leeds Uni PakSoc presents</span>
-        <span class="neon sc" id="hlPhScript"></span>
-        <span class="rule"></span>
-        <span class="gold zk">Zack Knight</span>
-        <span class="yr">Live · 2025/26</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ CONNECT ============ -->
 <section class="section section--plum" id="connect">
   <div class="wrap">
     <div class="head rv">
-      <p class="eyebrow"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>Three places we live</p>
+      <p class="eyebrow"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>Where we live</p>
       <h2 class="gold">Everything happens in one of these.</h2>
     </div>
     <div class="links">
@@ -574,6 +552,35 @@ p{margin:0}
         <p>Where it actually gets organised, lifts to socials, spare tickets, last-minute five-a-side. New link each September.</p>
         <span class="link__go">Join the chat <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
+      <a class="link rv" data-d="3" id="lnkLUU" href="#" target="_blank" rel="noopener">
+        <span class="link__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M2.5 9.5h19"/><path d="M6 14h5"/></svg></span>
+        <h3>LUU Membership</h3>
+        <span class="link__handle">Leeds University Union</span>
+        <p>Buy your union membership once and you're set for every ticketed event we run this year.</p>
+        <span class="link__go">Get membership <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LAST YEAR ============ -->
+<section class="section hl" id="lastyear">
+  <div class="wrap hl__grid">
+    <div class="hl__copy rv">
+      <p class="eyebrow"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>Last year</p>
+      <p class="neon hl__script" id="hlScript"></p>
+      <h2 class="gold" id="hlTitle"></h2>
+      <p class="lede" id="hlBody"></p>
+      <ul class="hl__facts" id="hlFacts"></ul>
+    </div>
+    <div class="hl__frame rv" data-d="1" id="hlFrame">
+      <div class="hl__ph">
+        <span class="ps">Leeds Uni PakSoc presents</span>
+        <span class="neon sc" id="hlPhScript"></span>
+        <span class="rule"></span>
+        <span class="gold zk">Zack Knight</span>
+        <span class="yr">Live · 2025/26</span>
+      </div>
     </div>
   </div>
 </section>
@@ -822,6 +829,7 @@ const CONFIG = {
   tiktok    : "https://www.tiktok.com/@leedsunipaksoc",
   tiktokHandle: "@leedsunipaksoc",
   whatsapp  : "https://chat.whatsapp.com/IwrybT08XYNFXmbubLDKS6?s=cl&p=i&ilr=0&amv=1",     // ← 2026/27 group invite link
+  luuMembership: "https://engage.luu.org.uk/groups/WQF/pakistani/memberships",
   defaultPasscode: "paksoc2627",                // ← documentation only: this is what supabase/seed.sql hashes into
                                                  //   admin_settings. Changing this comment does NOT change the live
                                                  //   passcode — use Settings → Save passcode once signed in for that.
@@ -834,9 +842,9 @@ const CONFIG = {
      reel takes priority over img when both are set. */
   highlight: {
     script : "Sham e Rang",
-    title  : "Our first ever formal — with Zack Knight",
-    body   : "The society's first formal, and we did not start quietly. Zack Knight, Bom Diggy, Ya Baba, Nakhre, played it live in Leeds. Whatever we put on this year has something to live up to.",
-    facts  : ["First formal in PakSoc history", "Live set from Zack Knight", "Session 2025/26"],
+    title  : "Our first ever ball with Zack Knight",
+    body   : "The society's first ball, and we did not start quietly. Zack Knight, Bom Diggy, Ya Baba, Nakhre, played it live in Leeds. Whatever we put on this year has something to live up to.",
+    facts  : ["First ball in PakSoc history", "Live set from Zack Knight", "Session 2025/26"],
     reel   : "",
     img    : "posters/shaam-e-rang.jpg"
   },
@@ -1385,6 +1393,7 @@ function wireLinks(){
   $('#lnkIG').href = CONFIG.instagram; $('#hIG').textContent = CONFIG.instaHandle;
   $('#lnkTT').href = CONFIG.tiktok;    $('#hTT').textContent = CONFIG.tiktokHandle;
   $('#lnkWA').href = CONFIG.whatsapp;
+  $('#lnkLUU').href = CONFIG.luuMembership;
   [['#heroWA'],['#headerWA']].forEach(([s]) => { const el=$(s); el.href=CONFIG.whatsapp; el.target='_blank'; el.rel='noopener'; });
 }
 const io = new IntersectionObserver(en => en.forEach(x => { if(x.isIntersecting){ x.target.classList.add('in'); io.unobserve(x.target); } }), { threshold:.14, rootMargin:'0px 0px -40px' });
