@@ -195,6 +195,8 @@ p{margin:0}
   background:radial-gradient(120% 90% at 50% 110%,#8E2F3C,#3A1030 62%,#1A0A22 100%);
 }
 .hl__frame img{width:100%;height:100%;object-fit:cover}
+.hl__frame.has-reel{aspect-ratio:auto;overflow:visible;background:none;display:flex}
+.hl__frame.has-reel iframe{border-radius:14px!important}
 .hl__ph{
   position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
   gap:6px;padding:26px;text-align:center;
@@ -223,6 +225,7 @@ p{margin:0}
 .link__go{font-size:.86rem;font-weight:700;display:flex;align-items:center;gap:7px}
 .link__go svg{width:15px;height:15px;transition:transform .22s var(--ease)}
 .link:hover .link__go svg{transform:translateX(4px)}
+.link.is-soon{opacity:.55;pointer-events:none}
 @media(max-width:820px){.links{grid-template-columns:1fr}}
 
 /* ---------- board ---------- */
@@ -439,6 +442,7 @@ p{margin:0}
       <a href="#whatson">What's on</a>
       <a href="#committee">Committee</a>
       <a href="#gallery">Photos</a>
+      <a href="#charity">Charity</a>
       <a href="#" id="navSignin">Committee sign in</a>
     </nav>
     <span class="signedin" id="signedInPill">
@@ -465,7 +469,7 @@ p{margin:0}
   <div class="wrap hero__in">
     <p class="hero__urdu">لیڈز یونیورسٹی پاکستانی سوسائٹی</p>
     <p class="neon hero__script">Warmly welcomes you</p>
-    <h1 class="gold">Leeds Uni PakSoc<span class="l2">Session 2026/27</span></h1>
+    <h1 class="gold">Leeds Uni PakSoc<span class="l2">2026/27</span></h1>
     <p class="lede">Culture nights, cricket, Eid dinners, chai runs and a group chat that never sleeps. Everyone's welcome — Pakistani or not, fresher or fourth year. Start with the chat, then turn up to something.</p>
     <div class="hero__actions">
       <a class="btn btn--go" id="heroWA" href="#connect">Join the 2026/27 group chat</a>
@@ -535,7 +539,7 @@ p{margin:0}
         <span class="neon sc" id="hlPhScript"></span>
         <span class="rule"></span>
         <span class="gold zk">Zack Knight</span>
-        <span class="yr">Live · Session 2025/26</span>
+        <span class="yr">Live · 2025/26</span>
       </div>
     </div>
   </div>
@@ -567,10 +571,22 @@ p{margin:0}
         <span class="link__ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.05L2 22l5.1-1.33A10 10 0 1 0 12 2Zm5.6 14.2c-.24.67-1.4 1.28-1.94 1.32-.5.04-.98.22-3.3-.69-2.78-1.1-4.53-3.94-4.67-4.13-.13-.19-1.1-1.47-1.1-2.8 0-1.32.7-1.97.94-2.24a1 1 0 0 1 .72-.33h.52c.17 0 .4-.06.62.47l.85 2.07c.07.15.12.32.02.5l-.3.46-.44.48c-.14.14-.29.3-.12.58.16.28.73 1.2 1.56 1.95 1.07.95 1.97 1.25 2.25 1.39.28.14.44.12.6-.07l.87-1c.2-.23.37-.17.62-.08l2 .94c.25.12.42.18.48.28.06.1.06.6-.18 1.27Z"/></svg></span>
         <h3>Group chat 2026/27</h3>
         <span class="link__handle">WhatsApp · members</span>
-        <p>Where it actually gets organised — lifts to socials, spare tickets, last-minute five-a-side. New link each September.</p>
+        <p>Where it actually gets organised, lifts to socials, spare tickets, last-minute five-a-side. New link each September.</p>
         <span class="link__go">Join the chat <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
       </a>
     </div>
+  </div>
+</section>
+
+<!-- ============ CHARITY ============ -->
+<section class="section section--deep" id="charity">
+  <div class="wrap">
+    <div class="head rv">
+      <p class="eyebrow"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>Give something back</p>
+      <h2 class="gold">Donate — Lebanon, Palestine, Pakistan.</h2>
+      <p class="lede">Committee-picked charities working on the ground in each country. These links go straight to the charity, not to us — tap through to give directly.</p>
+    </div>
+    <div class="links" id="charityLinks"></div>
   </div>
 </section>
 
@@ -596,7 +612,7 @@ p{margin:0}
     <div class="head rv">
       <p class="eyebrow"><svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>Your 2026/27 committee</p>
       <h2 class="gold">The ones to shout at.</h2>
-      <p class="lede">Announcement posters go up here as each role is confirmed. Grab any of us at an event — that's genuinely the fastest way to get something sorted.</p>
+      <p class="lede">Announcement posters go up here as each role is confirmed. Grab any of us at an event, that's genuinely the fastest way to get something sorted.</p>
     </div>
     <div class="crew" id="crew"></div>
   </div>
@@ -613,7 +629,7 @@ p{margin:0}
     <div class="gal__bar rv">
       <div class="search">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-        <input type="search" id="search" placeholder="Search your name, an event or a tag" aria-label="Search photos">
+        <input type="search" id="search" placeholder="Search an event or a tag" aria-label="Search photos">
       </div>
       <span class="count" id="cPhotos">—</span>
     </div>
@@ -653,6 +669,7 @@ p{margin:0}
       <nav class="footer__links" aria-label="Footer">
         <a href="#connect">Instagram</a><a href="#connect">TikTok</a><a href="#connect">Group chat</a>
         <a href="#whatson">What's on</a><a href="#committee">Committee</a><a href="#gallery">Photos</a>
+        <a href="#charity">Charity</a>
         <a href="#" id="footSignin">Committee sign in</a>
       </nav>
     </div>
@@ -672,7 +689,7 @@ p{margin:0}
       <div class="field" id="f-pass">
         <label for="passcode">Committee passcode</label>
         <input type="password" id="passcode" autocomplete="off" placeholder="Enter passcode">
-        <span class="hint">Shared with the 2026/27 committee only. Change it in Settings once you're in.</span>
+        <span class="hint">Shared with the 2026/27 committee only.</span>
       </div>
       <button class="btn btn--go btn--block" id="doSignin">Sign in</button>
     </div>
@@ -692,10 +709,10 @@ p{margin:0}
       <button data-pane="pEv">Events</button>
       <button data-pane="pGal">Photos</button>
       <button data-pane="pCrew">Committee posters</button>
+      <button data-pane="pChar">Charity</button>
       <button data-pane="pSet">Settings</button>
     </div>
     <div class="sheet__body">
-      <div class="alert alert--warn" id="storeWarn">Running without saved storage — anything you add will disappear when the page reloads.</div>
       <div class="alert alert--ok" id="okMsg"></div>
 
       <section class="pane is-on" id="pAnn">
@@ -760,6 +777,11 @@ p{margin:0}
         <div class="mini"><h4>Roles</h4><div id="crewAdmin"></div></div>
       </section>
 
+      <section class="pane" id="pChar">
+        <p style="font-size:.93rem;color:var(--muted);margin-bottom:6px">Add the donation link for each charity as it's confirmed. Leave the link blank and the card shows "Coming soon" instead of going out dead — changes go live on the page as soon as you save.</p>
+        <div id="charAdminForms"></div>
+      </section>
+
       <section class="pane" id="pSet">
         <div class="alert alert--warn is-on">This passcode keeps casual visitors out of the dashboard — it isn't real security. Never put anything sensitive on this page, and assume photos are public to anyone with the link.</div>
         <div class="field">
@@ -789,6 +811,7 @@ p{margin:0}
   </figure>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 <script>
 /* ==================================================================
    1. CONFIG — edit this block, nothing else needs touching
@@ -799,17 +822,23 @@ const CONFIG = {
   tiktok    : "https://www.tiktok.com/@leedsunipaksoc",
   tiktokHandle: "@leedsunipaksoc",
   whatsapp  : "https://chat.whatsapp.com/IwrybT08XYNFXmbubLDKS6?s=cl&p=i&ilr=0&amv=1",     // ← 2026/27 group invite link
-  defaultPasscode: "paksoc2627",                // ← change this in Settings after first sign in
+  defaultPasscode: "paksoc2627",                // ← documentation only: this is what supabase/seed.sql hashes into
+                                                 //   admin_settings. Changing this comment does NOT change the live
+                                                 //   passcode — use Settings → Save passcode once signed in for that.
 
-  /* Last year's headline event. Add a photo either by dropping a file next
-     to this page and setting img (e.g. "photos/shamerang.jpg"), or by
-     uploading one in the dashboard under Photos → Last year's highlight. */
+  /* Last year's headline event. Fill in at most one of these:
+     - reel : an Instagram post/reel URL — it's embedded live, playable in place.
+     - img  : a photo, either dropped next to this page and referenced here
+              (e.g. "photos/shamerang.jpg"), or uploaded in the dashboard
+              under Photos → Last year's highlight.
+     reel takes priority over img when both are set. */
   highlight: {
     script : "Sham e Rang",
     title  : "Our first ever formal — with Zack Knight",
-    body   : "The society's first formal, and we did not start quietly. Zack Knight — Bom Diggy, Ya Baba, Nakhre — played it live in Leeds. Whatever we put on this year has something to live up to.",
+    body   : "The society's first formal, and we did not start quietly. Zack Knight, Bom Diggy, Ya Baba, Nakhre, played it live in Leeds. Whatever we put on this year has something to live up to.",
     facts  : ["First formal in PakSoc history", "Live set from Zack Knight", "Session 2025/26"],
-    img    : ""
+    reel   : "",
+    img    : "posters/shaam-e-rang.jpg"
   },
 
   /* Committee roles, in the order they appear on the page.
@@ -822,61 +851,72 @@ const CONFIG = {
     { id:'secretary',       role:'Secretary',   name:'Malaika', img:'posters/Secretary-Malaika.jpeg' },
     { id:'treasurer',  role:'Treasurer',        name:'Shiza', img:'posters/Treasurer-Shiza.jpeg' },
     { id:'events',     role:'Events Officer', name:'', img:'' },
+    { id:'sponsorship',     role:'Sponsorship Officer', name:'Saffah', img:'posters/Sponsorship-Saffah.jpeg' },
     { id:'sports',     role:'Sports Secretary', name:'Ali', img:'posters/SportsSec-Ali.jpeg' },
     { id:'media',      role:'Social Media',name:'Amaan', img:'posters/SocialMedia-Amaan.jpeg' },
     { id:'charity',    role:'Photographer',  name:'Shafay', img:'posters/Photographer-Shafay.jpeg' },
     { id:'intl',       role:'Charity Officer',name:'Halima', img:'posters/Charity-Halima.jpeg' }
+  ],
+
+  /* Donation links for the Charity section. Leave url empty and the card
+     shows "Coming soon" instead of a dead link. All three are editable
+     from the dashboard (Charity tab) — committee updates there override
+     these defaults without touching this file. */
+  charities: [
+    { id:'palestine', country:'Palestine', org:'', url:'', blurb:'' },
+    { id:'lebanon',   country:'Lebanon',   org:'', url:'', blurb:'' },
+    { id:'pakistan',  country:'Pakistan',  org:'', url:'', blurb:'' }
   ]
 };
 
-/* ================= storage ================= */
-const KEY = 'paksoc:site:v2';
-const IMG = id => 'paksoc:img:' + id;
-const POSTER = id => 'paksoc:poster:' + id;
-const HL = 'paksoc:highlight';
-const HAS_STORE = typeof window.storage === 'object' && window.storage && typeof window.storage.get === 'function';
+/* ================= backend (Supabase) ================= */
+const SUPABASE_URL = 'https://YOUR-PROJECT-REF.supabase.co';           // ← paste your Project URL here
+const SUPABASE_ANON_KEY = 'YOUR-ANON-PUBLIC-KEY';                       // ← paste your anon public key here
+const EDGE_FN_URL = SUPABASE_URL + '/functions/v1/dashboard-api';
+const BUCKET = 'paksoc-media';
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+const publicUrl = path => sb.storage.from(BUCKET).getPublicUrl(path).data.publicUrl;
 
-let state = { passcode: CONFIG.defaultPasscode, announcements: [], events: [], albums: [], photos: [], crew: {}, highlightImg: false, seeded: false };
+let state = { announcements: [], events: [], albums: [], photos: [], crew: {}, charities: {}, highlightImg: false, highlightUpdatedAt: null };
 let isCommittee = false;
-const imgCache = new Map();
-const uid = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
+let sessionPasscode = '';   // in-memory only — never persisted, cleared on sign-out/reload
 
 async function load(){
-  if(!HAS_STORE) return;
-  try{ const r = await window.storage.get(KEY, true); if(r && r.value) state = Object.assign(state, JSON.parse(r.value)); }
-  catch(e){ /* first run */ }
+  const [ann, ev, alb, ph, crew, char, flags] = await Promise.all([
+    sb.from('announcements').select('*'),
+    sb.from('events').select('*'),
+    sb.from('albums').select('*'),
+    sb.from('photos').select('*'),
+    sb.from('crew_overrides').select('*'),
+    sb.from('charity_overrides').select('*'),
+    sb.from('site_flags').select('*').single(),
+  ]);
+  state.announcements = ann.data || [];
+  state.events = ev.data || [];
+  state.albums = alb.data || [];
+  state.photos = (ph.data || []).map(p => ({
+    id: p.id, albumId: p.album_id, caption: p.caption, tags: p.tags,
+    sample: p.sample, at: new Date(p.created_at).getTime(),
+    src: p.external_src || null, storagePath: p.storage_path || null,
+  }));
+  state.crew = Object.fromEntries((crew.data || []).map(c => [c.member_id, { name: c.name, hasImg: c.has_img, storagePath: c.storage_path, updatedAt: c.updated_at }]));
+  state.charities = Object.fromEntries((char.data || []).map(c => [c.charity_id, { org: c.org, url: c.url, blurb: c.blurb }]));
+  state.highlightImg = flags.data ? flags.data.highlight_img : false;
+  state.highlightUpdatedAt = flags.data ? flags.data.highlight_updated_at : null;
 }
-async function save(){
-  if(!HAS_STORE) return;
-  try{ await window.storage.set(KEY, JSON.stringify(state), true); }catch(e){ console.error('Could not save', e); }
-}
-
-/* ================= samples ================= */
-function sampleImg(a, b, seed){
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="700" height="700">
-  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs>
-  <rect width="700" height="700" fill="url(#g)"/>
-  <g fill="rgba(255,255,255,.15)"><circle cx="${140+seed*47}" cy="${200+seed*31}" r="120"/><circle cx="${520-seed*29}" cy="${480+seed*17}" r="90"/></g>
-  <path d="M0 ${560+seed*12} Q175 ${470+seed*9} 350 ${560+seed*12} T700 ${560+seed*12}" fill="none" stroke="rgba(255,255,255,.28)" stroke-width="3"/></svg>`;
-  return 'data:image/svg+xml,' + encodeURIComponent(svg);
-}
-function seed(){
-  if(state.seeded) return;
-  state.seeded = true;
-  const t = new Date(), iso = d => new Date(t.getTime() + d*864e5).toISOString().slice(0,10);
-  state.announcements = [
-    { id:uid(), title:'Group chat for 2026/27 is open', body:'New year, new link — the old chat is archived. Join through the button at the top so you get ticket drops first.', date:iso(-2), pinned:true, sample:true },
-    { id:uid(), title:'Freshers Week commencing week 21st September', body:'', date:iso(-6), sample:true }
-  ];
-  state.events = [
-    { id:uid(), title:"Freshers' Chai & Meet", date:iso(9),  time:'6:00pm', place:'LUU, Room 6', body:'Free chai and samosas, no tickets needed. Bring someone who hasn\'t met anyone yet.', sample:true },
-    { id:uid(), title:'PakSoc vs IndSoc — five-a-side', date:iso(17), time:'2:00pm', place:'The Edge, pitch 3', body:'Annual grudge match. £2 on the door, all abilities, subs guaranteed a run.', sample:true },
-    { id:uid(), title:'Culture Night', date:iso(38), time:'7:00pm', place:'Riley Smith Hall', body:'Food, dance, qawwali and the fashion walk. Tickets go live two weeks before — they sell out.', sample:true }
-  ];
-  const albumId = uid();
-  state.albums = [{ id:albumId, name:"Freshers' Welcome", date:iso(-14), sample:true }];
-  const pairs = [['#FF4D85','#E7A93A'],['#D06A28','#331546'],['#E7A93A','#9C3F22'],['#5E2130','#EE9B45'],['#331546','#FF4D85'],['#9C3F22','#E7A93A']];
-  state.photos = pairs.map((p,i) => ({ id:uid(), albumId, caption:"Freshers' Welcome", tags:['sample'], src:sampleImg(p[0],p[1],i), sample:true, at:Date.now()-i*1000 }));
+async function callDash(action, payload){
+  const res = await fetch(EDGE_FN_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'apikey': SUPABASE_ANON_KEY,
+      'Authorization': 'Bearer ' + SUPABASE_ANON_KEY,
+    },
+    body: JSON.stringify({ action, passcode: sessionPasscode, payload }),
+  });
+  const out = await res.json().catch(() => ({ ok:false, error:'bad_response' }));
+  if(!res.ok || !out.ok) throw new Error(out.message || out.error || 'Request failed');
+  return out.data;
 }
 
 /* ================= helpers ================= */
@@ -885,6 +925,8 @@ const $$ = s => [...document.querySelectorAll(s)];
 const esc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 const SPARK = '<svg class="spark" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c1.6 6.6 4.8 9.8 12 12-7.2 2.2-10.4 5.4-12 12-1.6-6.6-4.8-9.8-12-12C7.2 9.8 10.4 6.6 12 0Z"/></svg>';
+const ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>';
+const HEART = '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21s-7.5-4.6-10.3-9.2C.1 8.9 1.2 5 4.7 4a5 5 0 0 1 6 2.1A5 5 0 0 1 16.7 4c3.5 1 4.6 4.9 3 7.8C19.5 16.4 12 21 12 21Z"/></svg>';
 function niceDate(iso){
   if(!iso) return '';
   const d = new Date(iso + 'T00:00');
@@ -946,6 +988,17 @@ function renderEvents(){
 }
 
 /* ---- last year's highlight ---- */
+let igEmbedLoading = false;
+function loadInstagramEmbed(){
+  if(window.instgrm){ window.instgrm.Embeds.process(); return; }
+  if(igEmbedLoading) return;
+  igEmbedLoading = true;
+  const s = document.createElement('script');
+  s.src = 'https://www.instagram.com/embed.js';
+  s.async = true;
+  s.onload = () => { igEmbedLoading = false; window.instgrm && window.instgrm.Embeds.process(); };
+  document.head.appendChild(s);
+}
 async function renderHighlight(){
   const h = CONFIG.highlight || {};
   $('#hlScript').textContent = h.script || '';
@@ -954,11 +1007,18 @@ async function renderHighlight(){
   $('#hlBody').textContent = h.body || '';
   $('#hlFacts').innerHTML = (h.facts || []).map(f => `<li>${SPARK}${esc(f)}</li>`).join('');
 
+  if(h.reel){
+    const frame = $('#hlFrame');
+    frame.classList.add('has-reel');
+    frame.innerHTML = `<blockquote class="instagram-media" data-instgrm-permalink="${esc(h.reel)}" data-instgrm-version="14" style="margin:0;width:100%;background:#fff;border-radius:14px;min-height:420px;">
+      <a href="${esc(h.reel)}" target="_blank" rel="noopener" style="display:block;padding:44px 16px;text-align:center;color:#3897f0;font-family:sans-serif;font-size:14px;text-decoration:none;">View this reel on Instagram</a>
+    </blockquote>`;
+    loadInstagramEmbed();
+    return;
+  }
+
   let src = h.img || null;
-  if(!src && state.highlightImg && HAS_STORE){
-    if(imgCache.has('hl')) src = imgCache.get('hl');
-    else { try{ const r = await window.storage.get(HL, true); if(r && r.value){ imgCache.set('hl', r.value); src = r.value; } }catch(e){} }
-  } else if(!src && imgCache.has('hl')) src = imgCache.get('hl');
+  if(!src && state.highlightImg) src = publicUrl('highlight/highlight.jpg') + '?v=' + state.highlightUpdatedAt;
   if(!src) return;
   const frame = $('#hlFrame'), img = new Image();
   img.alt = (h.script || 'Event') + ' — ' + (h.title || '');
@@ -967,12 +1027,9 @@ async function renderHighlight(){
 }
 
 /* ---- committee ---- */
-async function getPoster(m){
+function getPoster(m){
   const saved = state.crew[m.id] || {};
-  if(imgCache.has('p_'+m.id)) return imgCache.get('p_'+m.id);
-  if(saved.hasImg && HAS_STORE){
-    try{ const r = await window.storage.get(POSTER(m.id), true); if(r && r.value){ imgCache.set('p_'+m.id, r.value); return r.value; } }catch(e){}
-  }
+  if(saved.hasImg && saved.storagePath) return publicUrl(saved.storagePath) + '?v=' + saved.updatedAt;
   return m.img || null;
 }
 function renderCrew(){
@@ -1003,13 +1060,33 @@ function renderCrew(){
   $$('#crew .rv').forEach(el => io.observe(el));
 }
 
+/* ---- charity ---- */
+function renderCharity(){
+  const wrap = $('#charityLinks');
+  if(!wrap) return;
+  wrap.innerHTML = CONFIG.charities.map((c,i) => {
+    const s = state.charities[c.id] || {};
+    const org = (s.org || c.org || '').trim();
+    const url = (s.url || c.url || '').trim();
+    const blurb = (s.blurb || c.blurb || '').trim();
+    const live = !!url;
+    const tag = live ? `href="${esc(url)}" target="_blank" rel="noopener"` : `href="#" tabindex="-1" aria-disabled="true"`;
+    return `<a class="link rv ${live?'':'is-soon'}" data-d="${i}" ${tag}>
+      <span class="link__ico">${HEART}</span>
+      <h3>${esc(c.country)}</h3>
+      <span class="link__handle">${org ? esc(org) : 'Charity to be confirmed'}</span>
+      <p>${blurb ? esc(blurb) : 'The committee is finalising a vetted charity for ' + esc(c.country) + '. Check back soon.'}</p>
+      <span class="link__go">${live ? 'Donate' : 'Coming soon'} ${live ? ARROW : ''}</span>
+    </a>`;
+  }).join('');
+  $$('#charityLinks .rv').forEach(el => io.observe(el));
+}
+
 /* ---- gallery ---- */
 let currentAlbum = 'all', visible = [];
-async function getSrc(p){
+function getSrc(p){
   if(p.src) return p.src;
-  if(imgCache.has(p.id)) return imgCache.get(p.id);
-  if(!HAS_STORE) return null;
-  try{ const r = await window.storage.get(IMG(p.id), true); if(r && r.value){ imgCache.set(p.id, r.value); return r.value; } }catch(e){}
+  if(p.storagePath) return publicUrl(p.storagePath);
   return null;
 }
 function renderAlbumTabs(){
@@ -1087,18 +1164,24 @@ $('#navSignin').addEventListener('click', askSignin);
 $('#footSignin').addEventListener('click', askSignin);
 $('#openDash').addEventListener('click', ()=>openDash());
 
-$('#doSignin').addEventListener('click', () => {
+$('#doSignin').addEventListener('click', async () => {
   const val = $('#passcode').value.trim();
-  if(val && val === state.passcode){
+  if(!val){ $('#siErr').classList.add('is-on'); $('#f-pass').classList.add('err'); return; }
+  const prev = sessionPasscode; sessionPasscode = val;
+  try{
+    await callDash('verify_passcode', {});
     isCommittee = true; $('#siErr').classList.remove('is-on'); $('#passcode').value='';
     closeModal($('#signinModal')); $('#signedInPill').classList.add('is-on'); openDash();
-  } else { $('#siErr').classList.add('is-on'); $('#f-pass').classList.add('err'); }
+  }catch(e){
+    sessionPasscode = prev;
+    $('#siErr').classList.add('is-on'); $('#f-pass').classList.add('err');
+  }
 });
 $('#passcode').addEventListener('keydown', e => { if(e.key==='Enter') $('#doSignin').click(); });
 $('#passcode').addEventListener('input', ()=>$('#f-pass').classList.remove('err'));
-$('#signOut').addEventListener('click', () => { isCommittee=false; $('#signedInPill').classList.remove('is-on'); closeModal($('#dashModal')); });
+$('#signOut').addEventListener('click', () => { isCommittee=false; sessionPasscode=''; $('#signedInPill').classList.remove('is-on'); closeModal($('#dashModal')); });
 
-function openDash(){ if(!HAS_STORE) $('#storeWarn').classList.add('is-on'); renderAdmin(); openModal('#dashModal'); }
+function openDash(){ renderAdmin(); openModal('#dashModal'); }
 $$('.tabs button').forEach(b => b.addEventListener('click', () => {
   $$('.tabs button').forEach(x=>x.classList.remove('is-on'));
   $$('.pane').forEach(p=>p.classList.remove('is-on'));
@@ -1108,7 +1191,7 @@ function toast(msg){
   const el = $('#okMsg'); el.textContent = msg; el.classList.add('is-on');
   clearTimeout(toast.t); toast.t = setTimeout(()=>el.classList.remove('is-on'), 3200);
 }
-async function commit(){ await save(); renderAnnouncements(); renderEvents(); renderHighlight(); renderCrew(); renderAlbumTabs(); renderGrid(); renderAdmin(); }
+async function commit(){ await load(); renderAnnouncements(); renderEvents(); renderHighlight(); renderCrew(); renderCharity(); renderAlbumTabs(); renderGrid(); renderAdmin(); }
 
 function renderAdmin(){
   $('#annAdmin').innerHTML = state.announcements.length ? state.announcements.map(a =>
@@ -1132,22 +1215,16 @@ function renderAdmin(){
       ${s.hasImg?`<button class="del" data-del="crew" data-id="${m.id}">Remove</button>`:''}</div>`;
   }).join('');
   syncCrewFields();
+  renderCharityAdmin();
 
   $$('[data-del]').forEach(b => b.addEventListener('click', async () => {
     const { del, id } = b.dataset;
-    if(del==='ann') state.announcements = state.announcements.filter(x=>x.id!==id);
-    if(del==='ev')  state.events = state.events.filter(x=>x.id!==id);
-    if(del==='crew'){
-      if(HAS_STORE){ try{ await window.storage.delete(POSTER(id), true); }catch(e){} }
-      imgCache.delete('p_'+id);
-      state.crew[id] = Object.assign({}, state.crew[id], { hasImg:false });
-    }
+    if(del==='ann')  await callDash('delete_announcement', { id });
+    if(del==='ev')   await callDash('delete_event', { id });
+    if(del==='crew') await callDash('remove_crew_poster', { memberId: id });
     if(del==='alb'){
       if(!confirm('Delete this album and its photos? This can\'t be undone.')) return;
-      const gone = state.photos.filter(p=>p.albumId===id);
-      state.photos = state.photos.filter(p=>p.albumId!==id);
-      state.albums = state.albums.filter(a=>a.id!==id);
-      if(HAS_STORE) for(const p of gone){ try{ await window.storage.delete(IMG(p.id), true); }catch(e){} }
+      await callDash('delete_album', { id });
       if(currentAlbum===id) currentAlbum='all';
     }
     await commit();
@@ -1162,29 +1239,51 @@ function syncCrewFields(){
 $('#crewWho').addEventListener('change', syncCrewFields);
 $('#crewName').addEventListener('change', async () => {
   const id = $('#crewWho').value;
-  state.crew[id] = Object.assign({}, state.crew[id], { name: $('#crewName').value.trim() });
+  await callDash('set_crew_name', { memberId: id, name: $('#crewName').value.trim() });
   await commit(); toast('Name updated.');
 });
+
+function renderCharityAdmin(){
+  const wrap = $('#charAdminForms');
+  if(!wrap) return;
+  wrap.innerHTML = CONFIG.charities.map(c => {
+    const s = state.charities[c.id] || {};
+    return `<div class="mini">
+      <h4>${esc(c.country)}</h4>
+      <div class="field"><label for="char_org_${c.id}">Charity name</label>
+        <input id="char_org_${c.id}" data-char="org" data-cid="${c.id}" value="${esc(s.org || c.org || '')}" placeholder="e.g. Islamic Relief UK"></div>
+      <div class="field"><label for="char_url_${c.id}">Donation link</label>
+        <input id="char_url_${c.id}" data-char="url" data-cid="${c.id}" value="${esc(s.url || c.url || '')}" placeholder="https://..."></div>
+      <div class="field"><label for="char_blurb_${c.id}">Short description</label>
+        <textarea id="char_blurb_${c.id}" data-char="blurb" data-cid="${c.id}" placeholder="One line on where the money goes.">${esc(s.blurb || c.blurb || '')}</textarea></div>
+    </div>`;
+  }).join('');
+  $$('#charAdminForms [data-char]').forEach(el => el.addEventListener('change', async () => {
+    const id = el.dataset.cid, key = el.dataset.char;
+    await callDash('set_charity_field', { charityId: id, field: key, value: el.value.trim() });
+    await load(); renderCharity(); toast('Charity link updated.');
+  }));
+}
 
 /* ---- add content ---- */
 $('#addAnn').addEventListener('click', async () => {
   const title = $('#aTitle').value.trim(), body = $('#aBody').value.trim();
   if(!title){ $('#aTitle').focus(); return; }
-  state.announcements.unshift({ id:uid(), title, body, date:new Date().toISOString().slice(0,10), pinned:$('#aPin').checked });
+  await callDash('post_announcement', { title, body, date:new Date().toISOString().slice(0,10), pinned:$('#aPin').checked });
   $('#aTitle').value=''; $('#aBody').value=''; $('#aPin').checked=false;
   await commit(); toast('Announcement posted — it\'s live on the page.');
 });
 $('#addEv').addEventListener('click', async () => {
   const title = $('#eTitle').value.trim();
   if(!title){ $('#eTitle').focus(); return; }
-  state.events.push({ id:uid(), title, date:$('#eDate').value, time:$('#eTime').value.trim(), place:$('#ePlace').value.trim(), body:$('#eBody').value.trim() });
+  await callDash('add_event', { title, date:$('#eDate').value, time:$('#eTime').value.trim(), place:$('#ePlace').value.trim(), body:$('#eBody').value.trim() });
   ['#eTitle','#eDate','#eTime','#ePlace','#eBody'].forEach(s=>$(s).value='');
   await commit(); toast('Event added to the diary.');
 });
 $('#addAlb').addEventListener('click', async () => {
   const name = $('#albName').value.trim();
   if(!name){ $('#albName').focus(); return; }
-  state.albums.unshift({ id:uid(), name, date:$('#albDate').value });
+  await callDash('create_album', { name, date:$('#albDate').value });
   $('#albName').value=''; $('#albDate').value='';
   await commit(); toast('Album created — now upload into it.');
 });
@@ -1215,14 +1314,12 @@ async function handleFiles(files){
   let done = 0, failed = 0;
   for(const file of list){
     try{
-      const dataUrl = await shrink(file), id = uid();
-      if(HAS_STORE) await window.storage.set(IMG(id), dataUrl, true);
-      imgCache.set(id, dataUrl);
-      state.photos.unshift({ id, albumId, tags, caption:'', at:Date.now() });
+      const dataUrl = await shrink(file);
+      await callDash('upload_photo', { albumId, tags, caption:'', dataUrl });
     }catch(e){ failed++; }
     done++; fill.style.width = Math.round(done/list.length*100)+'%';
   }
-  await save(); renderAlbumTabs(); renderGrid(); renderAdmin();
+  await commit();
   setTimeout(()=>{ bar.classList.remove('is-on'); fill.style.width='0'; }, 700);
   toast(`${done-failed} photo${done-failed===1?'':'s'} added${failed?`, ${failed} couldn't be read`:''}.`);
   $('#upTags').value = '';
@@ -1238,9 +1335,7 @@ async function handlePoster(file){
   const id = $('#crewWho').value;
   try{
     const dataUrl = await shrink(file, 1200, .78);
-    if(HAS_STORE) await window.storage.set(POSTER(id), dataUrl, true);
-    imgCache.set('p_'+id, dataUrl);
-    state.crew[id] = Object.assign({}, state.crew[id], { hasImg:true, name:$('#crewName').value.trim() });
+    await callDash('upload_crew_poster', { memberId: id, name: $('#crewName').value.trim(), dataUrl });
     await commit();
     toast('Poster added to the committee page.');
   }catch(e){ toast('That image couldn\'t be read — try a JPG or PNG.'); }
@@ -1249,9 +1344,7 @@ async function handleHighlight(file){
   if(!file || !file.type.startsWith('image/')) return;
   try{
     const dataUrl = await shrink(file, 1400, .78);
-    if(HAS_STORE) await window.storage.set(HL, dataUrl, true);
-    imgCache.set('hl', dataUrl);
-    state.highlightImg = true;
+    await callDash('upload_highlight', { dataUrl });
     await commit(); toast('Highlight photo added.');
   }catch(e){ toast('That image couldn\'t be read — try a JPG or PNG.'); }
 }
@@ -1271,15 +1364,13 @@ cdrop.addEventListener('drop', e => handlePoster(e.dataTransfer.files[0]));
 $('#savePass').addEventListener('click', async () => {
   const v = $('#newPass').value.trim();
   if(v.length < 4){ toast('Use at least four characters.'); return; }
-  state.passcode = v; $('#newPass').value='';
-  await save(); toast('Passcode changed. Share it in the committee chat.');
+  await callDash('change_passcode', { newPasscode: v });
+  sessionPasscode = v; $('#newPass').value='';
+  toast('Passcode changed. Share it in the committee chat.');
 });
 $('#clearSamples').addEventListener('click', async () => {
   if(!confirm('Remove all sample posts, events and photos?')) return;
-  state.announcements = state.announcements.filter(x=>!x.sample);
-  state.events = state.events.filter(x=>!x.sample);
-  state.photos = state.photos.filter(x=>!x.sample);
-  state.albums = state.albums.filter(x=>!x.sample);
+  await callDash('clear_samples', {});
   currentAlbum = 'all';
   await commit(); toast('Sample content cleared.');
 });
@@ -1301,9 +1392,8 @@ const io = new IntersectionObserver(en => en.forEach(x => { if(x.isIntersecting)
 /* ================= boot ================= */
 (async function init(){
   wireLinks();
-  await load();
-  if(!state.seeded){ seed(); await save(); }
-  renderAnnouncements(); renderEvents(); renderHighlight(); renderCrew(); renderAlbumTabs(); renderGrid();
+  try{ await load(); }catch(e){ console.error('Could not load site content', e); }
+  renderAnnouncements(); renderEvents(); renderHighlight(); renderCrew(); renderCharity(); renderAlbumTabs(); renderGrid();
   $$('.rv').forEach(el => io.observe(el));
 })();
 </script>
